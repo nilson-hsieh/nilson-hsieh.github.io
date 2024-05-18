@@ -20,23 +20,29 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"nilson.github.io","root":"/","images":"/images","scheme":"Pisces","darkmode":true,"version":"8.20.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js"></script>
 
-    <meta property="og:type" content="website">
-<meta property="og:title" content="Nilson 記事本">
-<meta property="og:url" content="http://nilson.github.io/">
+    <meta name="description" content="什麼是 HexoHexo 是一款基於 Node.js 的開源部落格框架，使用 Markdown 語言來解析文章，內建很多不同的主題 ，跟內建許多現成的套件可以直接使用。 安裝HexoHexo安裝非常的簡單，但是安裝前要先確定有沒有安裝  Node.js Git vscode (自己習慣的編輯器)  Node.js 安裝前往官網 下載後安裝 git 安裝前往 git 官網 查看安裝說明 安裝Hexo">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo 介紹">
+<meta property="og:url" content="http://nilson.github.io/2024/05/18/hexo-install/">
 <meta property="og:site_name" content="Nilson 記事本">
+<meta property="og:description" content="什麼是 HexoHexo 是一款基於 Node.js 的開源部落格框架，使用 Markdown 語言來解析文章，內建很多不同的主題 ，跟內建許多現成的套件可以直接使用。 安裝HexoHexo安裝非常的簡單，但是安裝前要先確定有沒有安裝  Node.js Git vscode (自己習慣的編輯器)  Node.js 安裝前往官網 下載後安裝 git 安裝前往 git 官網 查看安裝說明 安裝Hexo">
 <meta property="og:locale" content="zh_TW">
+<meta property="article:published_time" content="2024-05-18T09:47:52.000Z">
+<meta property="article:modified_time" content="2024-05-18T10:30:38.032Z">
 <meta property="article:author" content="nilson">
+<meta property="article:tag" content="開源軟體">
+<meta property="article:tag" content="hexo">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="http://nilson.github.io/">
+<link rel="canonical" href="http://nilson.github.io/2024/05/18/hexo-install/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":true,"isPost":false,"lang":"zh-tw","comments":"","permalink":"","path":"index.html","title":""}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-tw","comments":true,"permalink":"http://nilson.github.io/2024/05/18/hexo-install/","path":"2024/05/18/hexo-install/","title":"Hexo 介紹"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>Nilson 記事本</title>
+<title>Hexo 介紹 | Nilson 記事本</title>
   
 
 
@@ -69,7 +75,7 @@
 
     <a href="/" class="brand" rel="start">
       <i class="logo-line"></i>
-      <h1 class="site-title">Nilson 記事本</h1>
+      <p class="site-title">Nilson 記事本</p>
       <i class="logo-line"></i>
     </a>
   </div>
@@ -95,7 +101,7 @@
   
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-overview-active">
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           Table of Contents
@@ -108,6 +114,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%80%E9%BA%BC%E6%98%AF-Hexo"><span class="nav-number">1.</span> <span class="nav-text">什麼是 Hexo</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%9DHexo"><span class="nav-number">2.</span> <span class="nav-text">安裝Hexo</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Node-js-%E5%AE%89%E8%A3%9D"><span class="nav-number">2.1.</span> <span class="nav-text">Node.js 安裝</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#git-%E5%AE%89%E8%A3%9D"><span class="nav-number">2.2.</span> <span class="nav-text">git 安裝</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%9DHexo-1"><span class="nav-number">2.3.</span> <span class="nav-text">安裝Hexo</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#hexo-%E7%9B%B8%E9%97%9C%E6%8C%87%E4%BB%A4"><span class="nav-number">3.</span> <span class="nav-text">hexo 相關指令</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%96%B0%E5%A2%9E%E6%96%87%E7%AB%A0"><span class="nav-number">3.1.</span> <span class="nav-text">新增文章</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%96%B0%E5%A2%9E%E9%A0%81%E9%9D%A2"><span class="nav-number">3.2.</span> <span class="nav-text">新增頁面</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%94%A2%E7%94%9F%E9%9D%9C%E6%85%8B%E6%AA%94%E6%A1%88"><span class="nav-number">3.3.</span> <span class="nav-text">產生靜態檔案</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B8%85%E9%99%A4%E5%BF%AB%E5%8F%96%E5%8F%8A%E9%9D%9C%E6%85%8B%E6%AA%94%E6%A1%88"><span class="nav-number">3.4.</span> <span class="nav-text">清除快取及靜態檔案</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%B8%BD%E7%B5%90"><span class="nav-number">4.</span> <span class="nav-text">總結</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -160,16 +167,17 @@
 
     </div>
 
-    <div class="main-inner index posts-expand">
+    <div class="main-inner post posts-expand">
 
-    
+
+  
 
 
 <div class="post-block">
   
   
 
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-tw">
     <link itemprop="mainEntityOfPage" href="http://nilson.github.io/2024/05/18/hexo-install/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -183,13 +191,13 @@
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | Nilson 記事本">
+      <meta itemprop="name" content="Hexo 介紹 | Nilson 記事本">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2024/05/18/hexo-install/" class="post-title-link" itemprop="url">Hexo 介紹</a>
-        </h2>
+        <h1 class="post-title" itemprop="name headline">
+          Hexo 介紹
+        </h1>
 
         <div class="post-meta-container">
           <div class="post-meta">
@@ -235,8 +243,7 @@
     
     
     
-    <div class="post-body" itemprop="articleBody">
-          <h2 id="什麼是-Hexo"><a href="#什麼是-Hexo" class="headerlink" title="什麼是 Hexo"></a>什麼是 Hexo</h2><p>Hexo 是一款基於 Node.js 的開源部落格框架，使用 Markdown 語言來解析文章，內建很多不同的<a target="_blank" rel="noopener" href="https://hexo.io/themes/">主題</a> ，跟內建許多現成的套件可以直接使用。</p>
+    <div class="post-body" itemprop="articleBody"><h2 id="什麼是-Hexo"><a href="#什麼是-Hexo" class="headerlink" title="什麼是 Hexo"></a>什麼是 Hexo</h2><p>Hexo 是一款基於 Node.js 的開源部落格框架，使用 Markdown 語言來解析文章，內建很多不同的<a target="_blank" rel="noopener" href="https://hexo.io/themes/">主題</a> ，跟內建許多現成的套件可以直接使用。</p>
 <h2 id="安裝Hexo"><a href="#安裝Hexo" class="headerlink" title="安裝Hexo"></a>安裝Hexo</h2><p>Hexo安裝非常的簡單，但是安裝前要先確定有沒有安裝</p>
 <ul>
 <li>Node.js</li>
@@ -258,7 +265,6 @@
 <h3 id="清除快取及靜態檔案"><a href="#清除快取及靜態檔案" class="headerlink" title="清除快取及靜態檔案"></a>清除快取及靜態檔案</h3><p><code>$ hexo server</code></p>
 <h2 id="總結"><a href="#總結" class="headerlink" title="總結"></a>總結</h2><p>文章到這邊 hexo 基本已經架設好了，對於其他部落格軟體來說他非常的輕量，他能自動產生靜態網站放在 github 上，對於在寫部落個的又可以省了一筆主機的費用，下一篇再來說明如何透過 github 去架設 hexo</p>
 
-      
     </div>
 
     
@@ -266,11 +272,17 @@
     
 
     <footer class="post-footer">
-        <div class="post-eof"></div>
-      
+          <div class="post-tags">
+              <a href="/tags/%E9%96%8B%E6%BA%90%E8%BB%9F%E9%AB%94/" rel="tag"># 開源軟體</a>
+              <a href="/tags/hexo/" rel="tag"># hexo</a>
+          </div>
+
+        
+
     </footer>
   </article>
 </div>
+
 
 
 
