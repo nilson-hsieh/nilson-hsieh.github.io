@@ -1390,7 +1390,7 @@ pre code {
     vertical-align: middle;
   }
   .links-of-author a::before {
-    background: #d2ffff;
+    background: #ff79c8;
     display: inline-block;
     margin-right: 3px;
     transform: translateY(-2px);
@@ -1785,7 +1785,7 @@ pre code {
   width: 100%;
 }
 .with-love {
-  color: #f00;
+  color: #999;
   display: inline-block;
   margin: 0 5px;
 }
@@ -2698,17 +2698,6 @@ header.header {
 }
 .menu .menu-item a .badge {
   margin-left: auto;
-}
-.menu .menu-item a.menu-item-active::after {
-  background: #bbb;
-  border-radius: 50%;
-  content: ' ';
-  height: 6px;
-  margin-top: -3px;
-  position: absolute;
-  right: 15px;
-  top: 50%;
-  width: 6px;
 }
 @media (max-width: 991px) {
   .menu .menu-item.menu-item-search {
