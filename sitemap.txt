@@ -11,8 +11,8 @@ https://blog.nilson-hsieh.me/categories/
 https://blog.nilson-hsieh.me/home/
 https://blog.nilson-hsieh.me/
 https://blog.nilson-hsieh.me/tags/%E9%96%8B%E6%BA%90%E8%BB%9F%E9%AB%94/
+https://blog.nilson-hsieh.me/tags/Hexo/
 https://blog.nilson-hsieh.me/tags/php/
 https://blog.nilson-hsieh.me/tags/mysql/
-https://blog.nilson-hsieh.me/tags/Hexo/
-https://blog.nilson-hsieh.me/categories/php/
 https://blog.nilson-hsieh.me/categories/Hexo/
+https://blog.nilson-hsieh.me/categories/php/
