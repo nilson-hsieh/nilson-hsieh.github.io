@@ -20,29 +20,28 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"blog.nilson-hsieh.me","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.20.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜尋...","empty":"我們無法找到任何有關 ${query} 的搜索結果","hits_time":"${hits} 找到 ${time} 個結果","hits":"找到 ${hits} 個結果"},"path":"/search.xml","localsearch":{"enable":true,"top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="Hexo 是一款基於 Node.js 的開源部落格框架，使用 Markdown 語言來解析文章，內建很多不同的主題，跟內建許多現成的套件可以直接使用...">
+    <meta name="description" content="在撰寫 php 的時候常常會需要產生隨機字串， 以下就介紹幾種生成隨機字串的方法  1.使用函式生成 2.使用 str_shuffle() 跟 substr() 函數 ...">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hexo 介紹">
-<meta property="og:url" content="https://blog.nilson-hsieh.me/2024/05/18/hexo-install/">
+<meta property="og:title" content="php 生成隨機字串">
+<meta property="og:url" content="https://blog.nilson-hsieh.me/2024/05/19/php-random-str/">
 <meta property="og:site_name" content="Nilson 記事本">
-<meta property="og:description" content="Hexo 是一款基於 Node.js 的開源部落格框架，使用 Markdown 語言來解析文章，內建很多不同的主題，跟內建許多現成的套件可以直接使用...">
+<meta property="og:description" content="在撰寫 php 的時候常常會需要產生隨機字串， 以下就介紹幾種生成隨機字串的方法  1.使用函式生成 2.使用 str_shuffle() 跟 substr() 函數 ...">
 <meta property="og:locale" content="zh_TW">
-<meta property="article:published_time" content="2024-05-18T09:47:52.000Z">
-<meta property="article:modified_time" content="2024-05-18T14:12:28.014Z">
+<meta property="article:published_time" content="2024-05-19T03:38:22.000Z">
+<meta property="article:modified_time" content="2024-05-19T04:01:10.337Z">
 <meta property="article:author" content="nilson">
-<meta property="article:tag" content="hexo">
-<meta property="article:tag" content="開源軟體">
+<meta property="article:tag" content="php">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="https://blog.nilson-hsieh.me/2024/05/18/hexo-install/">
+<link rel="canonical" href="https://blog.nilson-hsieh.me/2024/05/19/php-random-str/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-TW","comments":true,"permalink":"https://blog.nilson-hsieh.me/2024/05/18/hexo-install/","path":"2024/05/18/hexo-install/","title":"Hexo 介紹"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-TW","comments":true,"permalink":"https://blog.nilson-hsieh.me/2024/05/19/php-random-str/","path":"2024/05/19/php-random-str/","title":"php 生成隨機字串"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>Hexo 介紹 | Nilson 記事本</title>
+<title>php 生成隨機字串 | Nilson 記事本</title>
   
 
 
@@ -141,7 +140,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%80%E9%BA%BC%E6%98%AF-Hexo"><span class="nav-number">1.</span> <span class="nav-text">什麼是 Hexo</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%9DHexo"><span class="nav-number">2.</span> <span class="nav-text">安裝Hexo</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Node-js-%E5%AE%89%E8%A3%9D"><span class="nav-number">2.1.</span> <span class="nav-text">Node.js 安裝</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#git-%E5%AE%89%E8%A3%9D"><span class="nav-number">2.2.</span> <span class="nav-text">git 安裝</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%9DHexo-1"><span class="nav-number">2.3.</span> <span class="nav-text">安裝Hexo</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#hexo-%E7%9B%B8%E9%97%9C%E6%8C%87%E4%BB%A4"><span class="nav-number">3.</span> <span class="nav-text">hexo 相關指令</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%96%B0%E5%A2%9E%E6%96%87%E7%AB%A0"><span class="nav-number">3.1.</span> <span class="nav-text">新增文章</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%96%B0%E5%A2%9E%E9%A0%81%E9%9D%A2"><span class="nav-number">3.2.</span> <span class="nav-text">新增頁面</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%94%A2%E7%94%9F%E9%9D%9C%E6%85%8B%E6%AA%94%E6%A1%88"><span class="nav-number">3.3.</span> <span class="nav-text">產生靜態檔案</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%95%9F%E5%8B%95%E4%BC%BA%E6%9C%8D%E5%99%A8"><span class="nav-number">3.4.</span> <span class="nav-text">啟動伺服器</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%B8%BD%E7%B5%90"><span class="nav-number">4.</span> <span class="nav-text">總結</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8%E5%87%BD%E5%BC%8F%E7%94%9F%E6%88%90"><span class="nav-number">2.</span> <span class="nav-text">使用函式生成</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8-str-shuffle-%E8%B7%9F-substr-%E5%87%BD%E6%95%B8"><span class="nav-number">3.</span> <span class="nav-text">使用 str_shuffle() 跟 substr() 函數</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8-md5-%E6%88%96-sha1-%E5%87%BD%E6%95%B8"><span class="nav-number">4.</span> <span class="nav-text">使用 md5  或 sha1 函數</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8-uniqid-%E5%87%BD%E5%BC%8F"><span class="nav-number">5.</span> <span class="nav-text">使用 uniqid() 函式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%B5%90%E8%AA%9E"><span class="nav-number">6.</span> <span class="nav-text">結語</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -206,7 +205,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-TW">
-    <link itemprop="mainEntityOfPage" href="https://blog.nilson-hsieh.me/2024/05/18/hexo-install/">
+    <link itemprop="mainEntityOfPage" href="https://blog.nilson-hsieh.me/2024/05/19/php-random-str/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -219,12 +218,12 @@
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="Hexo 介紹 | Nilson 記事本">
-      <meta itemprop="description" content="Hexo 是一款基於 Node.js 的開源部落格框架，使用 Markdown 語言來解析文章，內建很多不同的主題，跟內建許多現成的套件可以直接使用...">
+      <meta itemprop="name" content="php 生成隨機字串 | Nilson 記事本">
+      <meta itemprop="description" content="在撰寫 php 的時候常常會需要產生隨機字串， 以下就介紹幾種生成隨機字串的方法  1.使用函式生成 2.使用 str_shuffle() 跟 substr() 函數 ...">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          Hexo 介紹
+          php 生成隨機字串
         </h1>
 
         <div class="post-meta-container">
@@ -236,7 +235,7 @@
       <span class="post-meta-item-text">發表於</span>
       
 
-      <time title="創建時間：2024-05-18 17:47:52 / 修改時間：22:12:28" itemprop="dateCreated datePublished" datetime="2024-05-18T17:47:52+08:00">2024-05-18</time>
+      <time title="創建時間：2024-05-19 11:38:22 / 修改時間：12:01:10" itemprop="dateCreated datePublished" datetime="2024-05-19T11:38:22+08:00">2024-05-19</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -244,7 +243,7 @@
       </span>
       <span class="post-meta-item-text">分類於</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/hexo/" itemprop="url" rel="index"><span itemprop="name">hexo</span></a>
+          <a href="/categories/php/" itemprop="url" rel="index"><span itemprop="name">php</span></a>
         </span>
     </span>
 
@@ -257,8 +256,8 @@
       </span>
       <span class="post-meta-item-text">Disqus：</span>
     
-    <a title="disqus" href="/2024/05/18/hexo-install/#disqus_thread" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2024/05/18/hexo-install/" itemprop="commentCount"></span>
+    <a title="disqus" href="/2024/05/19/php-random-str/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2024/05/19/php-random-str/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -268,7 +267,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">文章字數：</span>
-      <span>347</span>
+      <span>227</span>
     </span>
     <span class="post-meta-item" title="所需閱讀時間">
       <span class="post-meta-item-icon">
@@ -279,34 +278,26 @@
     </span>
 </div>
 
-            <div class="post-description">Hexo 是一款基於 Node.js 的開源部落格框架，使用 Markdown 語言來解析文章，內建很多不同的主題，跟內建許多現成的套件可以直接使用...</div>
+            <div class="post-description">在撰寫 php 的時候常常會需要產生隨機字串， 以下就介紹幾種生成隨機字串的方法  1.使用函式生成 2.使用 str_shuffle() 跟 substr() 函數 ...</div>
         </div>
       </header>
 
     
     
     
-    <div class="post-body" itemprop="articleBody"><h2 id="什麼是-Hexo"><a href="#什麼是-Hexo" class="headerlink" title="什麼是 Hexo"></a>什麼是 Hexo</h2><p>Hexo 是一款基於 Node.js 的開源部落格框架，使用 Markdown 語言來解析文章，內建很多不同的<a target="_blank" rel="noopener" href="https://hexo.io/themes/">主題</a> ，跟內建許多現成的套件可以直接使用。</p>
-<h2 id="安裝Hexo"><a href="#安裝Hexo" class="headerlink" title="安裝Hexo"></a>安裝Hexo</h2><p>Hexo安裝非常的簡單，但是安裝前要先確定有沒有安裝</p>
-<ul>
-<li>Node.js</li>
-<li>Git</li>
-<li>vscode (自己習慣的編輯器)</li>
-</ul>
-<h3 id="Node-js-安裝"><a href="#Node-js-安裝" class="headerlink" title="Node.js 安裝"></a>Node.js 安裝</h3><p>前往<a target="_blank" rel="noopener" href="https://nodejs.org/en/download/package-manager/current">官網</a> 下載後安裝</p>
-<h3 id="git-安裝"><a href="#git-安裝" class="headerlink" title="git 安裝"></a>git 安裝</h3><p>前往 <a target="_blank" rel="noopener" href="https://git-scm.com/book/zh-tw/v2/%E9%96%8B%E5%A7%8B-Git-%E5%AE%89%E8%A3%9D%E6%95%99%E5%AD%B8">git 官網</a> 查看安裝說明</p>
-<h3 id="安裝Hexo-1"><a href="#安裝Hexo-1" class="headerlink" title="安裝Hexo"></a>安裝Hexo</h3><p>安裝完以上套件後執行下面指令</p>
-<p><code>npm install -g hexo-cli</code></p>
-<p>安裝完成後，執行下面語法，Hexo就會自動產生檔案在指定的資料夾裡</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ hexo init &lt;資料夾名稱&gt;  // 指定預設的資料夾名稱</span><br><span class="line">$ cd &lt;資料夾名稱&gt;  //切換至該資料夾</span><br><span class="line">$ npm install  //安裝</span><br></pre></td></tr></table></figure>
+    <div class="post-body" itemprop="articleBody"><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>在撰寫 php 的時候常常會需要產生隨機字串， 以下就介紹幾種生成隨機字串的方法</p>
+<h2 id="使用函式生成"><a href="#使用函式生成" class="headerlink" title="使用函式生成"></a>使用函式生成</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php</span><br><span class="line">function random_str_generator($len_of_gen_str)&#123;</span><br><span class="line">    $chars = &quot;0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz&quot;;</span><br><span class="line">    $var_size = strlen($chars);</span><br><span class="line">    $random_str = &quot;&quot;; // 初始化空字串</span><br><span class="line">        for ($x = 0; $x &lt; $len_of_gen_str; $x++) &#123;</span><br><span class="line">            $random_str .= $chars[rand(0, $var_size - 1)];</span><br><span class="line">        &#125;</span><br><span class="line">    return $random_str; // 回傳隨機字串</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">$random_str = random_str_generator(要產生的位元數);</span><br><span class="line"></span><br><span class="line">?&gt;</span><br></pre></td></tr></table></figure>
 
-<p>安裝完成後執行下面指令就能看到預設的網站</p>
-<p><code>$ hexo server</code></p>
-<h2 id="hexo-相關指令"><a href="#hexo-相關指令" class="headerlink" title="hexo 相關指令"></a>hexo 相關指令</h2><h3 id="新增文章"><a href="#新增文章" class="headerlink" title="新增文章"></a>新增文章</h3><p><code>$ hexo new post &lt;文章標題&gt;</code></p>
-<h3 id="新增頁面"><a href="#新增頁面" class="headerlink" title="新增頁面"></a>新增頁面</h3><p><code>$ hexo new page &lt;頁面標題&gt;</code></p>
-<h3 id="產生靜態檔案"><a href="#產生靜態檔案" class="headerlink" title="產生靜態檔案"></a>產生靜態檔案</h3><p><code>$ hexo generate</code></p>
-<h3 id="啟動伺服器"><a href="#啟動伺服器" class="headerlink" title="啟動伺服器"></a>啟動伺服器</h3><p><code>$ hexo server</code></p>
-<h2 id="總結"><a href="#總結" class="headerlink" title="總結"></a>總結</h2><p>文章到這邊 hexo 基本已經架設好了，對於其他部落格軟體來說他非常的輕量，他能自動產生靜態網站放在 github 上，對於在寫部落個的又可以省了一筆主機的費用，下一篇再來說明如何透過 github 去架設 hexo</p>
+
+<h2 id="使用-str-shuffle-跟-substr-函數"><a href="#使用-str-shuffle-跟-substr-函數" class="headerlink" title="使用 str_shuffle() 跟 substr() 函數"></a>使用 str_shuffle() 跟 substr() 函數</h2><p>str_shuffle 是 php 內建函式，主要是將字串隨機打亂，然後使用 substr 函式去抓取所需的位元數</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$start = 0;</span><br><span class="line">$end = 20;</span><br><span class="line">$Strings = &#x27;0123456789abcdefghijklmnopqrstuvwxyz&#x27;;</span><br><span class="line">$random_str = substr(str_shuffle($Strings), $x, $y);</span><br></pre></td></tr></table></figure>
+
+<h2 id="使用-md5-或-sha1-函數"><a href="#使用-md5-或-sha1-函數" class="headerlink" title="使用 md5  或 sha1 函數"></a>使用 md5  或 sha1 函數</h2><p>使用 md5  或 sha1 搭配  time() 函式使用</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$random_str =  md5(time());</span><br><span class="line"> </span><br><span class="line">$random_str = sha1(time());</span><br></pre></td></tr></table></figure>
+
+<h2 id="使用-uniqid-函式"><a href="#使用-uniqid-函式" class="headerlink" title="使用 uniqid() 函式"></a>使用 uniqid() 函式</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$random_str = uniqid();</span><br></pre></td></tr></table></figure>
+
+<h2 id="結語"><a href="#結語" class="headerlink" title="結語"></a>結語</h2><p>上文提供了4種不同產生隨機字串的方法，前兩種只是單純的產生隨機字串，如果要避免產生重複的字串推薦使用下面兩種方法</p>
 
     </div>
 
@@ -316,19 +307,18 @@
 
     <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/hexo/" rel="tag"># hexo</a>
-              <a href="/tags/%E9%96%8B%E6%BA%90%E8%BB%9F%E9%AB%94/" rel="tag"># 開源軟體</a>
+              <a href="/tags/php/" rel="tag"># php</a>
           </div>
 
         
 
           <div class="post-nav">
             <div class="post-nav-item">
+                <a href="/2024/05/19/php-password/" rel="prev" title="php 密碼驗證">
+                  <i class="fa fa-angle-left"></i> php 密碼驗證
+                </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2024/05/18/hexo-github/" rel="next" title="將 Hexo 部署至 Github pages">
-                  將 Hexo 部署至 Github pages <i class="fa fa-angle-right"></i>
-                </a>
             </div>
           </div>
     </footer>

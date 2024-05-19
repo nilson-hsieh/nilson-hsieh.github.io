@@ -20,23 +20,28 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"blog.nilson-hsieh.me","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.20.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜尋...","empty":"我們無法找到任何有關 ${query} 的搜索結果","hits_time":"${hits} 找到 ${time} 個結果","hits":"找到 ${hits} 個結果"},"path":"/search.xml","localsearch":{"enable":true,"top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
-    <meta property="og:type" content="website">
-<meta property="og:title" content="Nilson 記事本">
-<meta property="og:url" content="https://blog.nilson-hsieh.me/categories/php/">
+    <meta name="description" content="互動式網頁不免需要做到登入登出的認證，通常因為資安要求資料庫不會存明碼，所以將密碼存入資料庫時都會先加密過...">
+<meta property="og:type" content="article">
+<meta property="og:title" content="php 密碼驗證">
+<meta property="og:url" content="https://blog.nilson-hsieh.me/2024/05/19/php-password/">
 <meta property="og:site_name" content="Nilson 記事本">
+<meta property="og:description" content="互動式網頁不免需要做到登入登出的認證，通常因為資安要求資料庫不會存明碼，所以將密碼存入資料庫時都會先加密過...">
 <meta property="og:locale" content="zh_TW">
+<meta property="article:published_time" content="2024-05-19T03:16:33.000Z">
+<meta property="article:modified_time" content="2024-05-19T03:37:11.122Z">
 <meta property="article:author" content="nilson">
+<meta property="article:tag" content="php">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="https://blog.nilson-hsieh.me/categories/php/">
+<link rel="canonical" href="https://blog.nilson-hsieh.me/2024/05/19/php-password/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":false,"lang":"zh-TW","comments":"","permalink":"","path":"categories/php/index.html","title":""}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-TW","comments":true,"permalink":"https://blog.nilson-hsieh.me/2024/05/19/php-password/","path":"2024/05/19/php-password/","title":"php 密碼驗證"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>分類: php | Nilson 記事本</title>
+<title>php 密碼驗證 | Nilson 記事本</title>
   
 
 
@@ -122,7 +127,7 @@
   
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-overview-active">
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           文章目錄
@@ -135,6 +140,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AF%A6%E4%BD%9C"><span class="nav-number">2.</span> <span class="nav-text">實作</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%B3%87%E6%96%99%E5%8A%A0%E5%AF%86"><span class="nav-number">2.1.</span> <span class="nav-text">資料加密</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%B3%87%E6%96%99%E8%A7%A3%E5%AF%86"><span class="nav-number">2.2.</span> <span class="nav-text">資料解密</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%B5%90%E8%AA%9E"><span class="nav-number">3.</span> <span class="nav-text">結語</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -188,91 +194,142 @@
 
     </div>
 
-    <div class="main-inner category posts-collapse">
+    <div class="main-inner post posts-expand">
 
 
   
+
+
+<div class="post-block">
   
   
-  <div class="post-block">
-    <div class="post-content">
-      <div class="collection-title">
-        <h1 class="collection-header">php
-          <small>分類</small>
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-TW">
+    <link itemprop="mainEntityOfPage" href="https://blog.nilson-hsieh.me/2024/05/19/php-password/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="nilson">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Nilson 記事本">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="php 密碼驗證 | Nilson 記事本">
+      <meta itemprop="description" content="互動式網頁不免需要做到登入登出的認證，通常因為資安要求資料庫不會存明碼，所以將密碼存入資料庫時都會先加密過...">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          php 密碼驗證
         </h1>
-      </div>
 
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">發表於</span>
       
-    <div class="collection-year">
-      <span class="collection-header">2024</span>
+
+      <time title="創建時間：2024-05-19 11:16:33 / 修改時間：11:37:11" itemprop="dateCreated datePublished" datetime="2024-05-19T11:16:33+08:00">2024-05-19</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分類於</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/php/" itemprop="url" rel="index"><span itemprop="name">php</span></a>
+        </span>
+    </span>
+
+  
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Disqus：</span>
+    
+    <a title="disqus" href="/2024/05/19/php-password/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2024/05/19/php-password/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+    <span class="post-meta-item" title="文章字數">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">文章字數：</span>
+      <span>182</span>
+    </span>
+    <span class="post-meta-item" title="所需閱讀時間">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">所需閱讀時間 &asymp;</span>
+      <span>1 分鐘</span>
+    </span>
+</div>
+
+            <div class="post-description">互動式網頁不免需要做到登入登出的認證，通常因為資安要求資料庫不會存明碼，所以將密碼存入資料庫時都會先加密過...</div>
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>互動式網頁不免需要做到登入登出的認證，通常因為資安要求資料庫不會存明碼，所以將密碼存入資料庫時都會先加密過，以下說明如何使用 password_hash 進行資料的加密跟解密</p>
+<h2 id="實作"><a href="#實作" class="headerlink" title="實作"></a>實作</h2><h3 id="資料加密"><a href="#資料加密" class="headerlink" title="資料加密"></a>資料加密</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$my_password = 要設定的密碼;</span><br><span class="line">$hash = password_hash($my_password, PASSWORD_DEFAULT);</span><br></pre></td></tr></table></figure>
+<p>這樣 $hash 出來的值就會是加密過了</p>
+<h3 id="資料解密"><a href="#資料解密" class="headerlink" title="資料解密"></a>資料解密</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">$my_password = 設定的密碼;</span><br><span class="line">$hash = 經過password_hash加密過的字串;</span><br><span class="line">if (password_verify($my_password, $hash)) &#123;</span><br><span class="line">    echo &#x27;密碼正確!&#x27;;</span><br><span class="line">&#125; else &#123;</span><br><span class="line">    echo &#x27;密碼錯誤&#x27;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="結語"><a href="#結語" class="headerlink" title="結語"></a>結語</h2><p>透過上面的加密跟解密函式可以完成密碼的加密跟解密，不需要再寫其他的演算法，是不是很方便呢?</p>
+
     </div>
 
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2024-05-19T11:38:22+08:00"
-              content="2024-05-19">
-          05-19
-        </time>
-      </div>
+    
+    
+    
 
-      <div class="post-title">
-          <a class="post-title-link" href="/2024/05/19/php-random-str/" itemprop="url">
-            <span itemprop="name">php 生成隨機字串</span>
-          </a>
-      </div>
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/php/" rel="tag"># php</a>
+          </div>
 
-      
-    </header>
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2024/05/19/php-mysql/" rel="prev" title="php 使用 mysql">
+                  <i class="fa fa-angle-left"></i> php 使用 mysql
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2024/05/19/php-random-str/" rel="next" title="php 生成隨機字串">
+                  php 生成隨機字串 <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
   </article>
+</div>
 
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2024-05-19T11:16:33+08:00"
-              content="2024-05-19">
-          05-19
-        </time>
-      </div>
 
-      <div class="post-title">
-          <a class="post-title-link" href="/2024/05/19/php-password/" itemprop="url">
-            <span itemprop="name">php 密碼驗證</span>
-          </a>
-      </div>
 
-      
-    </header>
-  </article>
 
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2024-05-19T09:45:43+08:00"
-              content="2024-05-19">
-          05-19
-        </time>
-      </div>
 
-      <div class="post-title">
-          <a class="post-title-link" href="/2024/05/19/php-mysql/" itemprop="url">
-            <span itemprop="name">php 使用 mysql</span>
-          </a>
-      </div>
 
-      
-    </header>
-  </article>
-
-    </div>
+    
+  <div class="comments" id="disqus_thread">
+    <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
   </div>
   
-  
-  
-
 </div>
   </main>
 

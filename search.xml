@@ -1,6 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Hexo 介紹</title>
+    <url>/2024/05/18/hexo-install/</url>
+    <content><![CDATA[<h2 id="什麼是-Hexo"><a href="#什麼是-Hexo" class="headerlink" title="什麼是 Hexo"></a>什麼是 Hexo</h2><p>Hexo 是一款基於 Node.js 的開源部落格框架，使用 Markdown 語言來解析文章，內建很多不同的<a href="https://hexo.io/themes/">主題</a> ，跟內建許多現成的套件可以直接使用。</p>
+<h2 id="安裝Hexo"><a href="#安裝Hexo" class="headerlink" title="安裝Hexo"></a>安裝Hexo</h2><p>Hexo安裝非常的簡單，但是安裝前要先確定有沒有安裝</p>
+<ul>
+<li>Node.js</li>
+<li>Git</li>
+<li>vscode (自己習慣的編輯器)</li>
+</ul>
+<h3 id="Node-js-安裝"><a href="#Node-js-安裝" class="headerlink" title="Node.js 安裝"></a>Node.js 安裝</h3><p>前往<a href="https://nodejs.org/en/download/package-manager/current">官網</a> 下載後安裝</p>
+<h3 id="git-安裝"><a href="#git-安裝" class="headerlink" title="git 安裝"></a>git 安裝</h3><p>前往 <a href="https://git-scm.com/book/zh-tw/v2/%E9%96%8B%E5%A7%8B-Git-%E5%AE%89%E8%A3%9D%E6%95%99%E5%AD%B8">git 官網</a> 查看安裝說明</p>
+<h3 id="安裝Hexo-1"><a href="#安裝Hexo-1" class="headerlink" title="安裝Hexo"></a>安裝Hexo</h3><p>安裝完以上套件後執行下面指令</p>
+<p><code>npm install -g hexo-cli</code></p>
+<p>安裝完成後，執行下面語法，Hexo就會自動產生檔案在指定的資料夾裡</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ hexo init &lt;資料夾名稱&gt;  // 指定預設的資料夾名稱</span><br><span class="line">$ cd &lt;資料夾名稱&gt;  //切換至該資料夾</span><br><span class="line">$ npm install  //安裝</span><br></pre></td></tr></table></figure>
+
+<p>安裝完成後執行下面指令就能看到預設的網站</p>
+<p><code>$ hexo server</code></p>
+<h2 id="hexo-相關指令"><a href="#hexo-相關指令" class="headerlink" title="hexo 相關指令"></a>hexo 相關指令</h2><h3 id="新增文章"><a href="#新增文章" class="headerlink" title="新增文章"></a>新增文章</h3><p><code>$ hexo new post &lt;文章標題&gt;</code></p>
+<h3 id="新增頁面"><a href="#新增頁面" class="headerlink" title="新增頁面"></a>新增頁面</h3><p><code>$ hexo new page &lt;頁面標題&gt;</code></p>
+<h3 id="產生靜態檔案"><a href="#產生靜態檔案" class="headerlink" title="產生靜態檔案"></a>產生靜態檔案</h3><p><code>$ hexo generate</code></p>
+<h3 id="啟動伺服器"><a href="#啟動伺服器" class="headerlink" title="啟動伺服器"></a>啟動伺服器</h3><p><code>$ hexo server</code></p>
+<h2 id="總結"><a href="#總結" class="headerlink" title="總結"></a>總結</h2><p>文章到這邊 hexo 基本已經架設好了，對於其他部落格軟體來說他非常的輕量，他能自動產生靜態網站放在 github 上，對於在寫部落個的又可以省了一筆主機的費用，下一篇再來說明如何透過 github 去架設 hexo</p>
+]]></content>
+      <categories>
+        <category>hexo</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+        <tag>開源軟體</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>將 Hexo 部署至 Github pages</title>
     <url>/2024/05/18/hexo-github/</url>
     <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>為什麼選擇使用 Github 的 pages，因為 hexo 有整合 Github pages  套件可以自動更新部署。</p>
@@ -78,41 +111,8 @@
         <category>hexo</category>
       </categories>
       <tags>
-        <tag>開源軟體</tag>
         <tag>hexo</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hexo 介紹</title>
-    <url>/2024/05/18/hexo-install/</url>
-    <content><![CDATA[<h2 id="什麼是-Hexo"><a href="#什麼是-Hexo" class="headerlink" title="什麼是 Hexo"></a>什麼是 Hexo</h2><p>Hexo 是一款基於 Node.js 的開源部落格框架，使用 Markdown 語言來解析文章，內建很多不同的<a href="https://hexo.io/themes/">主題</a> ，跟內建許多現成的套件可以直接使用。</p>
-<h2 id="安裝Hexo"><a href="#安裝Hexo" class="headerlink" title="安裝Hexo"></a>安裝Hexo</h2><p>Hexo安裝非常的簡單，但是安裝前要先確定有沒有安裝</p>
-<ul>
-<li>Node.js</li>
-<li>Git</li>
-<li>vscode (自己習慣的編輯器)</li>
-</ul>
-<h3 id="Node-js-安裝"><a href="#Node-js-安裝" class="headerlink" title="Node.js 安裝"></a>Node.js 安裝</h3><p>前往<a href="https://nodejs.org/en/download/package-manager/current">官網</a> 下載後安裝</p>
-<h3 id="git-安裝"><a href="#git-安裝" class="headerlink" title="git 安裝"></a>git 安裝</h3><p>前往 <a href="https://git-scm.com/book/zh-tw/v2/%E9%96%8B%E5%A7%8B-Git-%E5%AE%89%E8%A3%9D%E6%95%99%E5%AD%B8">git 官網</a> 查看安裝說明</p>
-<h3 id="安裝Hexo-1"><a href="#安裝Hexo-1" class="headerlink" title="安裝Hexo"></a>安裝Hexo</h3><p>安裝完以上套件後執行下面指令</p>
-<p><code>npm install -g hexo-cli</code></p>
-<p>安裝完成後，執行下面語法，Hexo就會自動產生檔案在指定的資料夾裡</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ hexo init &lt;資料夾名稱&gt;  // 指定預設的資料夾名稱</span><br><span class="line">$ cd &lt;資料夾名稱&gt;  //切換至該資料夾</span><br><span class="line">$ npm install  //安裝</span><br></pre></td></tr></table></figure>
-
-<p>安裝完成後執行下面指令就能看到預設的網站</p>
-<p><code>$ hexo server</code></p>
-<h2 id="hexo-相關指令"><a href="#hexo-相關指令" class="headerlink" title="hexo 相關指令"></a>hexo 相關指令</h2><h3 id="新增文章"><a href="#新增文章" class="headerlink" title="新增文章"></a>新增文章</h3><p><code>$ hexo new post &lt;文章標題&gt;</code></p>
-<h3 id="新增頁面"><a href="#新增頁面" class="headerlink" title="新增頁面"></a>新增頁面</h3><p><code>$ hexo new page &lt;頁面標題&gt;</code></p>
-<h3 id="產生靜態檔案"><a href="#產生靜態檔案" class="headerlink" title="產生靜態檔案"></a>產生靜態檔案</h3><p><code>$ hexo generate</code></p>
-<h3 id="啟動伺服器"><a href="#啟動伺服器" class="headerlink" title="啟動伺服器"></a>啟動伺服器</h3><p><code>$ hexo server</code></p>
-<h2 id="總結"><a href="#總結" class="headerlink" title="總結"></a>總結</h2><p>文章到這邊 hexo 基本已經架設好了，對於其他部落格軟體來說他非常的輕量，他能自動產生靜態網站放在 github 上，對於在寫部落個的又可以省了一筆主機的費用，下一篇再來說明如何透過 github 去架設 hexo</p>
-]]></content>
-      <categories>
-        <category>hexo</category>
-      </categories>
-      <tags>
         <tag>開源軟體</tag>
-        <tag>hexo</tag>
       </tags>
   </entry>
   <entry>
@@ -142,6 +142,46 @@
       <tags>
         <tag>php</tag>
         <tag>mysql</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>php 密碼驗證</title>
+    <url>/2024/05/19/php-password/</url>
+    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>互動式網頁不免需要做到登入登出的認證，通常因為資安要求資料庫不會存明碼，所以將密碼存入資料庫時都會先加密過，以下說明如何使用 password_hash 進行資料的加密跟解密</p>
+<h2 id="實作"><a href="#實作" class="headerlink" title="實作"></a>實作</h2><h3 id="資料加密"><a href="#資料加密" class="headerlink" title="資料加密"></a>資料加密</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$my_password = 要設定的密碼;</span><br><span class="line">$hash = password_hash($my_password, PASSWORD_DEFAULT);</span><br></pre></td></tr></table></figure>
+<p>這樣 $hash 出來的值就會是加密過了</p>
+<h3 id="資料解密"><a href="#資料解密" class="headerlink" title="資料解密"></a>資料解密</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$my_password = 設定的密碼;</span><br><span class="line">$hash = 經過password_hash加密過的字串;</span><br><span class="line">if (password_verify($my_password, $hash)) &#123;</span><br><span class="line">    echo &#x27;密碼正確!&#x27;;</span><br><span class="line">&#125; else &#123;</span><br><span class="line">    echo &#x27;密碼錯誤&#x27;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="結語"><a href="#結語" class="headerlink" title="結語"></a>結語</h2><p>透過上面的加密跟解密函式可以完成密碼的加密跟解密，不需要再寫其他的演算法，是不是很方便呢?</p>
+]]></content>
+      <categories>
+        <category>php</category>
+      </categories>
+      <tags>
+        <tag>php</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>php 生成隨機字串</title>
+    <url>/2024/05/19/php-random-str/</url>
+    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>在撰寫 php 的時候常常會需要產生隨機字串， 以下就介紹幾種生成隨機字串的方法</p>
+<h2 id="使用函式生成"><a href="#使用函式生成" class="headerlink" title="使用函式生成"></a>使用函式生成</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;?php</span><br><span class="line">function random_str_generator($len_of_gen_str)&#123;</span><br><span class="line">    $chars = &quot;0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz&quot;;</span><br><span class="line">    $var_size = strlen($chars);</span><br><span class="line">    $random_str = &quot;&quot;; // 初始化空字串</span><br><span class="line">        for ($x = 0; $x &lt; $len_of_gen_str; $x++) &#123;</span><br><span class="line">            $random_str .= $chars[rand(0, $var_size - 1)];</span><br><span class="line">        &#125;</span><br><span class="line">    return $random_str; // 回傳隨機字串</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">$random_str = random_str_generator(要產生的位元數);</span><br><span class="line"></span><br><span class="line">?&gt;</span><br></pre></td></tr></table></figure>
+
+
+<h2 id="使用-str-shuffle-跟-substr-函數"><a href="#使用-str-shuffle-跟-substr-函數" class="headerlink" title="使用 str_shuffle() 跟 substr() 函數"></a>使用 str_shuffle() 跟 substr() 函數</h2><p>str_shuffle 是 php 內建函式，主要是將字串隨機打亂，然後使用 substr 函式去抓取所需的位元數</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$start = 0;</span><br><span class="line">$end = 20;</span><br><span class="line">$Strings = &#x27;0123456789abcdefghijklmnopqrstuvwxyz&#x27;;</span><br><span class="line">$random_str = substr(str_shuffle($Strings), $x, $y);</span><br></pre></td></tr></table></figure>
+
+<h2 id="使用-md5-或-sha1-函數"><a href="#使用-md5-或-sha1-函數" class="headerlink" title="使用 md5  或 sha1 函數"></a>使用 md5  或 sha1 函數</h2><p>使用 md5  或 sha1 搭配  time() 函式使用</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$random_str =  md5(time());</span><br><span class="line"> </span><br><span class="line">$random_str = sha1(time());</span><br></pre></td></tr></table></figure>
+
+<h2 id="使用-uniqid-函式"><a href="#使用-uniqid-函式" class="headerlink" title="使用 uniqid() 函式"></a>使用 uniqid() 函式</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$random_str = uniqid();</span><br></pre></td></tr></table></figure>
+
+<h2 id="結語"><a href="#結語" class="headerlink" title="結語"></a>結語</h2><p>上文提供了4種不同產生隨機字串的方法，前兩種只是單純的產生隨機字串，如果要避免產生重複的字串推薦使用下面兩種方法</p>
+]]></content>
+      <categories>
+        <category>php</category>
+      </categories>
+      <tags>
+        <tag>php</tag>
       </tags>
   </entry>
 </search>
