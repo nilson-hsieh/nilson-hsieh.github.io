@@ -1,6 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Hexo 介紹</title>
+    <url>/2024/05/18/hexo-install/</url>
+    <content><![CDATA[<h2 id="什麼是-Hexo"><a href="#什麼是-Hexo" class="headerlink" title="什麼是 Hexo"></a>什麼是 Hexo</h2><p>Hexo 是一款基於 Node.js 的開源部落格框架，使用 Markdown 語言來解析文章，內建很多不同的<a href="https://hexo.io/themes/">主題</a> ，跟內建許多現成的套件可以直接使用。</p>
+<h2 id="安裝Hexo"><a href="#安裝Hexo" class="headerlink" title="安裝Hexo"></a>安裝Hexo</h2><p>Hexo安裝非常的簡單，但是安裝前要先確定有沒有安裝</p>
+<ul>
+<li>Node.js</li>
+<li>Git</li>
+<li>vscode (自己習慣的編輯器)</li>
+</ul>
+<h3 id="Node-js-安裝"><a href="#Node-js-安裝" class="headerlink" title="Node.js 安裝"></a>Node.js 安裝</h3><p>前往<a href="https://nodejs.org/en/download/package-manager/current">官網</a> 下載後安裝</p>
+<h3 id="git-安裝"><a href="#git-安裝" class="headerlink" title="git 安裝"></a>git 安裝</h3><p>前往 <a href="https://git-scm.com/book/zh-tw/v2/%E9%96%8B%E5%A7%8B-Git-%E5%AE%89%E8%A3%9D%E6%95%99%E5%AD%B8">git 官網</a> 查看安裝說明</p>
+<h3 id="安裝Hexo-1"><a href="#安裝Hexo-1" class="headerlink" title="安裝Hexo"></a>安裝Hexo</h3><p>安裝完以上套件後執行下面指令</p>
+<p><code>npm install -g hexo-cli</code></p>
+<p>安裝完成後，執行下面語法，Hexo就會自動產生檔案在指定的資料夾裡</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ hexo init &lt;資料夾名稱&gt;  // 指定預設的資料夾名稱</span><br><span class="line">$ cd &lt;資料夾名稱&gt;  //切換至該資料夾</span><br><span class="line">$ npm install  //安裝</span><br></pre></td></tr></table></figure>
+
+<p>安裝完成後執行下面指令就能看到預設的網站</p>
+<p><code>$ hexo server</code></p>
+<h2 id="hexo-相關指令"><a href="#hexo-相關指令" class="headerlink" title="hexo 相關指令"></a>hexo 相關指令</h2><h3 id="新增文章"><a href="#新增文章" class="headerlink" title="新增文章"></a>新增文章</h3><p><code>$ hexo new post &lt;文章標題&gt;</code></p>
+<h3 id="新增頁面"><a href="#新增頁面" class="headerlink" title="新增頁面"></a>新增頁面</h3><p><code>$ hexo new page &lt;頁面標題&gt;</code></p>
+<h3 id="產生靜態檔案"><a href="#產生靜態檔案" class="headerlink" title="產生靜態檔案"></a>產生靜態檔案</h3><p><code>$ hexo generate</code></p>
+<h3 id="啟動伺服器"><a href="#啟動伺服器" class="headerlink" title="啟動伺服器"></a>啟動伺服器</h3><p><code>$ hexo server</code></p>
+<h2 id="總結"><a href="#總結" class="headerlink" title="總結"></a>總結</h2><p>文章到這邊 hexo 基本已經架設好了，對於其他部落格軟體來說他非常的輕量，他能自動產生靜態網站放在 github 上，對於在寫部落個的又可以省了一筆主機的費用，下一篇再來說明如何透過 github 去架設 hexo</p>
+]]></content>
+      <categories>
+        <category>Hexo</category>
+      </categories>
+      <tags>
+        <tag>開源軟體</tag>
+        <tag>Hexo</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>將 Hexo 部署至 Github pages</title>
     <url>/2024/05/18/hexo-github/</url>
     <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>為什麼選擇使用 Github 的 pages，因為 hexo 有整合 Github pages  套件可以自動更新部署。</p>
@@ -83,83 +116,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Hexo 介紹</title>
-    <url>/2024/05/18/hexo-install/</url>
-    <content><![CDATA[<h2 id="什麼是-Hexo"><a href="#什麼是-Hexo" class="headerlink" title="什麼是 Hexo"></a>什麼是 Hexo</h2><p>Hexo 是一款基於 Node.js 的開源部落格框架，使用 Markdown 語言來解析文章，內建很多不同的<a href="https://hexo.io/themes/">主題</a> ，跟內建許多現成的套件可以直接使用。</p>
-<h2 id="安裝Hexo"><a href="#安裝Hexo" class="headerlink" title="安裝Hexo"></a>安裝Hexo</h2><p>Hexo安裝非常的簡單，但是安裝前要先確定有沒有安裝</p>
-<ul>
-<li>Node.js</li>
-<li>Git</li>
-<li>vscode (自己習慣的編輯器)</li>
-</ul>
-<h3 id="Node-js-安裝"><a href="#Node-js-安裝" class="headerlink" title="Node.js 安裝"></a>Node.js 安裝</h3><p>前往<a href="https://nodejs.org/en/download/package-manager/current">官網</a> 下載後安裝</p>
-<h3 id="git-安裝"><a href="#git-安裝" class="headerlink" title="git 安裝"></a>git 安裝</h3><p>前往 <a href="https://git-scm.com/book/zh-tw/v2/%E9%96%8B%E5%A7%8B-Git-%E5%AE%89%E8%A3%9D%E6%95%99%E5%AD%B8">git 官網</a> 查看安裝說明</p>
-<h3 id="安裝Hexo-1"><a href="#安裝Hexo-1" class="headerlink" title="安裝Hexo"></a>安裝Hexo</h3><p>安裝完以上套件後執行下面指令</p>
-<p><code>npm install -g hexo-cli</code></p>
-<p>安裝完成後，執行下面語法，Hexo就會自動產生檔案在指定的資料夾裡</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ hexo init &lt;資料夾名稱&gt;  // 指定預設的資料夾名稱</span><br><span class="line">$ cd &lt;資料夾名稱&gt;  //切換至該資料夾</span><br><span class="line">$ npm install  //安裝</span><br></pre></td></tr></table></figure>
-
-<p>安裝完成後執行下面指令就能看到預設的網站</p>
-<p><code>$ hexo server</code></p>
-<h2 id="hexo-相關指令"><a href="#hexo-相關指令" class="headerlink" title="hexo 相關指令"></a>hexo 相關指令</h2><h3 id="新增文章"><a href="#新增文章" class="headerlink" title="新增文章"></a>新增文章</h3><p><code>$ hexo new post &lt;文章標題&gt;</code></p>
-<h3 id="新增頁面"><a href="#新增頁面" class="headerlink" title="新增頁面"></a>新增頁面</h3><p><code>$ hexo new page &lt;頁面標題&gt;</code></p>
-<h3 id="產生靜態檔案"><a href="#產生靜態檔案" class="headerlink" title="產生靜態檔案"></a>產生靜態檔案</h3><p><code>$ hexo generate</code></p>
-<h3 id="啟動伺服器"><a href="#啟動伺服器" class="headerlink" title="啟動伺服器"></a>啟動伺服器</h3><p><code>$ hexo server</code></p>
-<h2 id="總結"><a href="#總結" class="headerlink" title="總結"></a>總結</h2><p>文章到這邊 hexo 基本已經架設好了，對於其他部落格軟體來說他非常的輕量，他能自動產生靜態網站放在 github 上，對於在寫部落個的又可以省了一筆主機的費用，下一篇再來說明如何透過 github 去架設 hexo</p>
-]]></content>
-      <categories>
-        <category>Hexo</category>
-      </categories>
-      <tags>
-        <tag>開源軟體</tag>
-        <tag>Hexo</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hexo 設定 及 next 主題設定</title>
-    <url>/2024/05/19/hexo-next/</url>
-    <content><![CDATA[<h2 id="Hexo-設定"><a href="#Hexo-設定" class="headerlink" title="Hexo 設定"></a>Hexo 設定</h2><p>在 Hexo 檔案中有一個 _config.yml 設定整個網站的資訊，下面說明常用的設定</p>
-<h3 id="網站基礎設定"><a href="#網站基礎設定" class="headerlink" title="網站基礎設定"></a>網站基礎設定</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">title: #網站標題</span><br><span class="line">description:  #網站介紹</span><br><span class="line">keywords: #網站關鍵字</span><br><span class="line">author: #網站作者</span><br><span class="line">language: #網站語言，中文是 zh-TW</span><br><span class="line">timezone:  #時區</span><br></pre></td></tr></table></figure>
-
-<h3 id="網址設定"><a href="#網址設定" class="headerlink" title="網址設定"></a>網址設定</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">url: https://blog.nilson-hsieh.me #網站網址</span><br><span class="line">permalink: :year/:month/:day/:title/ #網站連結格式</span><br></pre></td></tr></table></figure>
-
-<h3 id="日期及時間格式設定"><a href="#日期及時間格式設定" class="headerlink" title="日期及時間格式設定"></a>日期及時間格式設定</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">date_format: YYYY-MM-DD #網站日期格式</span><br><span class="line">time_format: HH:mm:ss #網站時間格式</span><br></pre></td></tr></table></figure>
-
-<h3 id="網站主題設定"><a href="#網站主題設定" class="headerlink" title="網站主題設定"></a>網站主題設定</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">theme: next #網站主題設定，筆者選用 next 主題</span><br></pre></td></tr></table></figure>
-
-<h3 id="部署方式設定"><a href="#部署方式設定" class="headerlink" title="部署方式設定"></a>部署方式設定</h3><p>部署方式，在前一篇 <a href="/2024/05/18/hexo-github/">將 Hexo 部署至 Github pages</a> 有提到相關的設定</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type:  </span><br><span class="line">  repo: </span><br><span class="line">  branch: </span><br></pre></td></tr></table></figure>
-
-<h2 id="next-主題安裝"><a href="#next-主題安裝" class="headerlink" title="next 主題安裝"></a>next 主題安裝</h2><p>透過 git 將主題安裝至 themes&#x2F;next 下面</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git clone https://github.com/theme-next/hexo-theme-next themes/next</span><br></pre></td></tr></table></figure>
-
-<p>接著到 Hexo 的 _config.yml 將 theme 設定為 next</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">theme: next </span><br></pre></td></tr></table></figure>
-
-<h2 id="next-主題設定"><a href="#next-主題設定" class="headerlink" title="next 主題設定"></a>next 主題設定</h2><p>在 themes&#x2F;next 資料夾中 _config.yml 設定主題的資訊，下面說明常用的設定</p>
-<h3 id="menu-設定"><a href="#menu-設定" class="headerlink" title="menu 設定"></a>menu 設定</h3><p>格式： 網頁名稱 網址 || 顯示的圖示</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">menu:</span><br><span class="line">  首頁: / || fa fa-home</span><br><span class="line">  關於我: /about/ || fa fa-user</span><br><span class="line">  文章分類: /categories/ || fa fa-th</span><br><span class="line">  文章標籤: /tags/ || fa fa-tags</span><br><span class="line">  所有文章: /archives/ || fa fa-archive</span><br></pre></td></tr></table></figure>
-
-
-<h3 id="作者設定"><a href="#作者設定" class="headerlink" title="作者設定"></a>作者設定</h3><p>這設定會顯示在右側個人資料的位址<br><img src="./01.png" width="50%" ></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">avatar:</span><br><span class="line">  url:  #圖片的網址</span><br><span class="line">  rounded: true #開啟圓角</span><br><span class="line">  rotated: false</span><br></pre></td></tr></table></figure>
-
-<h3 id="社群連結設定"><a href="#社群連結設定" class="headerlink" title="社群連結設定"></a>社群連結設定</h3><p>格式： 社群名稱： 網址 || 顯示的圖示</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">social:</span><br><span class="line">  GitHub: https://github.com/yourname/ || fab fa-github</span><br><span class="line">  E-Mail: mailto:yourmail || fa fa-envelope</span><br><span class="line">  Weibo: https://weibo.com/yourname || fab fa-weibo</span><br><span class="line">  Twitter: https://twitter.com/yourname || fab fa-twitter</span><br><span class="line">  FB Page: https://www.facebook.com/yourname/ || fab fa-facebook</span><br><span class="line">  StackOverflow: https://stackoverflow.com/yourname || fab fa-stack-overflow</span><br><span class="line">  YouTube: https://youtube.com/yourname || fab fa-youtube</span><br><span class="line">  Instagram: https://www.instagram.com/yourname/ || fab fa-instagram</span><br><span class="line">  Skype: skype:yourname?call|chat || fab fa-skype</span><br></pre></td></tr></table></figure>
-
-<h3 id="網站-footer-設定"><a href="#網站-footer-設定" class="headerlink" title="網站 footer 設定"></a>網站 footer 設定</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">footer:</span><br><span class="line"># 設定 在 copyright 跟資訊欄中間的 Icon</span><br><span class="line">  icon:</span><br><span class="line">    name: fa fa-heart</span><br><span class="line">    animated: false</span><br><span class="line">    color: &quot;#999999&quot;</span><br><span class="line"># 設定 copyright 文字</span><br><span class="line">  copyright:  Nilson | CC BY-NC 4.0</span><br><span class="line"></span><br><span class="line"># 是否要顯示 Powered by Hexo &amp; NexT</span><br><span class="line">  powered: false</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h2 id="總結"><a href="#總結" class="headerlink" title="總結"></a>總結</h2><p>這篇教學安裝了 next 主題，目前網站已經慢慢成形了，接著下一篇會串接一些第三方的套件，達成文章搜尋、留言板等等的功能</p>
-]]></content>
-      <categories>
-        <category>Hexo</category>
-      </categories>
-      <tags>
-        <tag>開源軟體</tag>
-        <tag>Hexo</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>php 使用 mysql</title>
     <url>/2024/05/19/php-mysql/</url>
     <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>寫一個互動式的網站，最重要的就是可以將資料存到 mysql 裡面，php 連線的方式有很多種，例如 PDO、mysqli 等等，但是我個人偏好使用 mysqli 所以這篇說明都是使用 mysqli 做連線</p>
@@ -226,6 +182,50 @@
       </categories>
       <tags>
         <tag>php</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hexo 設定 及 next 主題設定</title>
+    <url>/2024/05/19/hexo-next/</url>
+    <content><![CDATA[<h2 id="Hexo-設定"><a href="#Hexo-設定" class="headerlink" title="Hexo 設定"></a>Hexo 設定</h2><p>在 Hexo 檔案中有一個 _config.yml 設定整個網站的資訊，下面說明常用的設定</p>
+<h3 id="網站基礎設定"><a href="#網站基礎設定" class="headerlink" title="網站基礎設定"></a>網站基礎設定</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">title: #網站標題</span><br><span class="line">description:  #網站介紹</span><br><span class="line">keywords: #網站關鍵字</span><br><span class="line">author: #網站作者</span><br><span class="line">language: #網站語言，中文是 zh-TW</span><br><span class="line">timezone:  #時區</span><br></pre></td></tr></table></figure>
+
+<h3 id="網址設定"><a href="#網址設定" class="headerlink" title="網址設定"></a>網址設定</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">url: https://blog.nilson-hsieh.me #網站網址</span><br><span class="line">permalink: :year/:month/:day/:title/ #網站連結格式</span><br></pre></td></tr></table></figure>
+
+<h3 id="日期及時間格式設定"><a href="#日期及時間格式設定" class="headerlink" title="日期及時間格式設定"></a>日期及時間格式設定</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">date_format: YYYY-MM-DD #網站日期格式</span><br><span class="line">time_format: HH:mm:ss #網站時間格式</span><br></pre></td></tr></table></figure>
+
+<h3 id="網站主題設定"><a href="#網站主題設定" class="headerlink" title="網站主題設定"></a>網站主題設定</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">theme: next #網站主題設定，筆者選用 next 主題</span><br></pre></td></tr></table></figure>
+
+<h3 id="部署方式設定"><a href="#部署方式設定" class="headerlink" title="部署方式設定"></a>部署方式設定</h3><p>部署方式，在前一篇 <a href="/2024/05/18/hexo-github/">將 Hexo 部署至 Github pages</a> 有提到相關的設定</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type:  </span><br><span class="line">  repo: </span><br><span class="line">  branch: </span><br></pre></td></tr></table></figure>
+
+<h2 id="next-主題安裝"><a href="#next-主題安裝" class="headerlink" title="next 主題安裝"></a>next 主題安裝</h2><p>透過 git 將主題安裝至 themes&#x2F;next 下面</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git clone https://github.com/theme-next/hexo-theme-next themes/next</span><br></pre></td></tr></table></figure>
+
+<p>接著到 Hexo 的 _config.yml 將 theme 設定為 next</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">theme: next </span><br></pre></td></tr></table></figure>
+
+<h2 id="next-主題設定"><a href="#next-主題設定" class="headerlink" title="next 主題設定"></a>next 主題設定</h2><p>在 themes&#x2F;next 資料夾中 _config.yml 設定主題的資訊，下面說明常用的設定</p>
+<h3 id="menu-設定"><a href="#menu-設定" class="headerlink" title="menu 設定"></a>menu 設定</h3><p>格式： 網頁名稱 網址 || 顯示的圖示</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">menu:</span><br><span class="line">  首頁: / || fa fa-home</span><br><span class="line">  關於我: /about/ || fa fa-user</span><br><span class="line">  文章分類: /categories/ || fa fa-th</span><br><span class="line">  文章標籤: /tags/ || fa fa-tags</span><br><span class="line">  所有文章: /archives/ || fa fa-archive</span><br></pre></td></tr></table></figure>
+
+
+<h3 id="作者設定"><a href="#作者設定" class="headerlink" title="作者設定"></a>作者設定</h3><p>這設定會顯示在右側個人資料的位址<br><img src="./01.png" width="50%" ></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">avatar:</span><br><span class="line">  url:  #圖片的網址</span><br><span class="line">  rounded: true #開啟圓角</span><br><span class="line">  rotated: false</span><br></pre></td></tr></table></figure>
+
+<h3 id="社群連結設定"><a href="#社群連結設定" class="headerlink" title="社群連結設定"></a>社群連結設定</h3><p>格式： 社群名稱： 網址 || 顯示的圖示</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">social:</span><br><span class="line">  GitHub: https://github.com/yourname/ || fab fa-github</span><br><span class="line">  E-Mail: mailto:yourmail || fa fa-envelope</span><br><span class="line">  Weibo: https://weibo.com/yourname || fab fa-weibo</span><br><span class="line">  Twitter: https://twitter.com/yourname || fab fa-twitter</span><br><span class="line">  FB Page: https://www.facebook.com/yourname/ || fab fa-facebook</span><br><span class="line">  StackOverflow: https://stackoverflow.com/yourname || fab fa-stack-overflow</span><br><span class="line">  YouTube: https://youtube.com/yourname || fab fa-youtube</span><br><span class="line">  Instagram: https://www.instagram.com/yourname/ || fab fa-instagram</span><br><span class="line">  Skype: skype:yourname?call|chat || fab fa-skype</span><br></pre></td></tr></table></figure>
+
+<h3 id="網站-footer-設定"><a href="#網站-footer-設定" class="headerlink" title="網站 footer 設定"></a>網站 footer 設定</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">footer:</span><br><span class="line"># 設定 在 copyright 跟資訊欄中間的 Icon</span><br><span class="line">  icon:</span><br><span class="line">    name: fa fa-heart</span><br><span class="line">    animated: false</span><br><span class="line">    color: &quot;#999999&quot;</span><br><span class="line"># 設定 copyright 文字</span><br><span class="line">  copyright:  Nilson | CC BY-NC 4.0</span><br><span class="line"></span><br><span class="line"># 是否要顯示 Powered by Hexo &amp; NexT</span><br><span class="line">  powered: false</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="總結"><a href="#總結" class="headerlink" title="總結"></a>總結</h2><p>這篇教學安裝了 next 主題，目前網站已經慢慢成形了，接著下一篇會串接一些第三方的套件，達成文章搜尋、留言板等等的功能</p>
+]]></content>
+      <categories>
+        <category>Hexo</category>
+      </categories>
+      <tags>
+        <tag>開源軟體</tag>
+        <tag>Hexo</tag>
       </tags>
   </entry>
 </search>
