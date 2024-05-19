@@ -115,4 +115,33 @@
         <tag>hexo</tag>
       </tags>
   </entry>
+  <entry>
+    <title>php 使用 mysql</title>
+    <url>/2024/05/19/php-mysql/</url>
+    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>寫一個互動式的網站，最重要的就是可以將資料存到 mysql 裡面，php 連線的方式有很多種，例如 PDO、mysqli 等等，但是我個人偏好使用 mysqli 所以這篇說明都是使用 mysqli 做連線</p>
+<p>如果php 版本使用 8.0 以上， mysqli 沒有預設開啟，所以要前往 php.ini 將 mysqli 開啟</p>
+<h2 id="連線資料庫"><a href="#連線資料庫" class="headerlink" title="連線資料庫"></a>連線資料庫</h2><p>程式說明</p>
+<ol>
+<li>透過 mysqli_connect(主機位址, 資料庫使用者, 資料庫密碼, 資料表名稱) 的方式連接</li>
+<li>將編碼方式設定為 utf8 ，這樣中文才不會有亂碼</li>
+<li>將時區設為 Asia&#x2F;Taipei ，通常習慣先設定，之後在處理時間的時候比較不會因為時區而發生錯誤</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;?php</span><br><span class="line">$server = &#x27;localhost&#x27;; //主機</span><br><span class="line">$db_username = &#x27;XXXXXX&#x27;; //資料庫用户名</span><br><span class="line">$db_password = &#x27;XXXXXX&#x27;; //資料庫密碼</span><br><span class="line">$db_tables = &#x27;XXXXXX&#x27;;//資料庫名稱</span><br><span class="line">$con = mysqli_connect($server, $db_username, $db_password, $db_tables);</span><br><span class="line">if (!$con) &#123;</span><br><span class="line">        $response = array(&quot;success&quot; =&gt; false, &quot;text&quot; =&gt; &quot;MySQL!&quot;);</span><br><span class="line">        echo json_encode($response);</span><br><span class="line">        exit();</span><br><span class="line">&#125;</span><br><span class="line">mysqli_query($con,&quot;set names utf8&quot;);</span><br><span class="line">date_default_timezone_set(&#x27;Asia/Taipei&#x27;);</span><br><span class="line">?&gt;</span><br></pre></td></tr></table></figure>
+
+<h2 id="資料庫查詢"><a href="#資料庫查詢" class="headerlink" title="資料庫查詢"></a>資料庫查詢</h2><p>程式說明<br>查詢資料庫主要有分單筆跟多筆，單筆一次只會回傳一列．多筆因為外面包了一個while迴圈，所以可以輸出多列</p>
+<h3 id="單筆"><a href="#單筆" class="headerlink" title="單筆"></a>單筆</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$sql = &quot;  SQL語法  &quot;;</span><br><span class="line">$result = mysqli_query($con,$sql) or die(&#x27;資料庫語法錯誤&#x27;);</span><br><span class="line">$row = mysqli_fetch_array($result);</span><br><span class="line">echo $row[要輸出的欄位名稱];</span><br></pre></td></tr></table></figure>
+<h3 id="多筆"><a href="#多筆" class="headerlink" title="多筆"></a>多筆</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$sql = &quot;  SQL語法  &quot;;</span><br><span class="line">$result = mysqli_query($con,$sql) or die(&#x27;資料庫語法錯誤&#x27;);</span><br><span class="line">while($row = mysqli_fetch_array($result))&#123;</span><br><span class="line">    echo $row[要輸出的欄位名稱];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="新增、刪除、修改資料庫"><a href="#新增、刪除、修改資料庫" class="headerlink" title="新增、刪除、修改資料庫"></a>新增、刪除、修改資料庫</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$sql = &quot;  SQL語法  &quot;;</span><br><span class="line">$result = mysqli_query($con,$sql) or die(&#x27;資料庫語法錯誤&#x27;);</span><br></pre></td></tr></table></figure>
+
+<h2 id="總結"><a href="#總結" class="headerlink" title="總結"></a>總結</h2><p>透過以上的方法就可以對資料庫連線，並且可以做到資料庫的增刪改查，這個方法目前使用到現在約2年左右，還沒發生一些奇怪的錯誤，所以推薦給大家使用看看</p>
+]]></content>
+      <categories>
+        <category>php</category>
+      </categories>
+      <tags>
+        <tag>php</tag>
+        <tag>mysql</tag>
+      </tags>
+  </entry>
 </search>
