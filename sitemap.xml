@@ -11,7 +11,7 @@
   </url>
   
   <url>
-    <loc>https://blog.nilson-hsieh.me/2024/05/18/hexo-install/</loc>
+    <loc>https://blog.nilson-hsieh.me/2024/05/18/hexo-github/</loc>
     
     <lastmod>2024-05-19</lastmod>
     
@@ -20,7 +20,7 @@
   </url>
   
   <url>
-    <loc>https://blog.nilson-hsieh.me/2024/05/18/hexo-github/</loc>
+    <loc>https://blog.nilson-hsieh.me/2024/05/18/hexo-install/</loc>
     
     <lastmod>2024-05-19</lastmod>
     
@@ -110,6 +110,13 @@
 
   
   <url>
+    <loc>https://blog.nilson-hsieh.me/tags/hexo/</loc>
+    <lastmod>2024-05-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://blog.nilson-hsieh.me/tags/%E9%96%8B%E6%BA%90%E8%BB%9F%E9%AB%94/</loc>
     <lastmod>2024-05-19</lastmod>
     <changefreq>weekly</changefreq>
@@ -130,24 +137,17 @@
     <priority>0.2</priority>
   </url>
   
-  <url>
-    <loc>https://blog.nilson-hsieh.me/tags/Hexo/</loc>
-    <lastmod>2024-05-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
 
   
   <url>
-    <loc>https://blog.nilson-hsieh.me/categories/php/</loc>
+    <loc>https://blog.nilson-hsieh.me/categories/hexo/</loc>
     <lastmod>2024-05-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://blog.nilson-hsieh.me/categories/Hexo/</loc>
+    <loc>https://blog.nilson-hsieh.me/categories/php/</loc>
     <lastmod>2024-05-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>

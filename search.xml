@@ -26,11 +26,11 @@
 <h2 id="總結"><a href="#總結" class="headerlink" title="總結"></a>總結</h2><p>文章到這邊 hexo 基本已經架設好了，對於其他部落格軟體來說他非常的輕量，他能自動產生靜態網站放在 github 上，對於在寫部落個的又可以省了一筆主機的費用，下一篇再來說明如何透過 github 去架設 hexo</p>
 ]]></content>
       <categories>
-        <category>Hexo</category>
+        <category>hexo</category>
       </categories>
       <tags>
+        <tag>hexo</tag>
         <tag>開源軟體</tag>
-        <tag>Hexo</tag>
       </tags>
   </entry>
   <entry>
@@ -108,11 +108,11 @@
 <h2 id="總結"><a href="#總結" class="headerlink" title="總結"></a>總結</h2><p>使用 hexo + github 架設雖然安裝過程簡單，但是他的功能還是非常強大，下一篇就來介紹要如何更換主題以及使用一些外掛。</p>
 ]]></content>
       <categories>
-        <category>Hexo</category>
+        <category>hexo</category>
       </categories>
       <tags>
+        <tag>hexo</tag>
         <tag>開源軟體</tag>
-        <tag>Hexo</tag>
       </tags>
   </entry>
   <entry>
@@ -221,11 +221,11 @@
 <h2 id="總結"><a href="#總結" class="headerlink" title="總結"></a>總結</h2><p>這篇教學安裝了 next 主題，目前網站已經慢慢成形了，接著下一篇會串接一些第三方的套件，達成文章搜尋、留言板等等的功能</p>
 ]]></content>
       <categories>
-        <category>Hexo</category>
+        <category>hexo</category>
       </categories>
       <tags>
+        <tag>hexo</tag>
         <tag>開源軟體</tag>
-        <tag>Hexo</tag>
       </tags>
   </entry>
 </search>
