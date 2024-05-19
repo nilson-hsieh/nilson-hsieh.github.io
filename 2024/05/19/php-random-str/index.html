@@ -28,7 +28,7 @@
 <meta property="og:description" content="在撰寫 php 的時候常常會需要產生隨機字串， 以下就介紹幾種生成隨機字串的方法  1.使用函式生成 2.使用 str_shuffle() 跟 substr() 函數 ...">
 <meta property="og:locale" content="zh_TW">
 <meta property="article:published_time" content="2024-05-19T03:38:22.000Z">
-<meta property="article:modified_time" content="2024-05-19T04:01:10.337Z">
+<meta property="article:modified_time" content="2024-05-19T15:14:27.701Z">
 <meta property="article:author" content="nilson">
 <meta property="article:tag" content="php">
 <meta name="twitter:card" content="summary">
@@ -146,6 +146,8 @@
 
         <div class="site-overview-wrap sidebar-panel">
           <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="nilson"
+      src="/img/simg.jpg">
   <p class="site-author-name" itemprop="name">nilson</p>
   <div class="site-description" itemprop="description"></div>
 </div>
@@ -153,7 +155,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">5</span>
+          <span class="site-state-item-count">6</span>
           <span class="site-state-item-name">文章</span>
         </a>
       </div>
@@ -208,7 +210,7 @@
     <link itemprop="mainEntityOfPage" href="https://blog.nilson-hsieh.me/2024/05/19/php-random-str/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="/img/simg.jpg">
       <meta itemprop="name" content="nilson">
     </span>
 
@@ -235,7 +237,7 @@
       <span class="post-meta-item-text">發表於</span>
       
 
-      <time title="創建時間：2024-05-19 11:38:22 / 修改時間：12:01:10" itemprop="dateCreated datePublished" datetime="2024-05-19T11:38:22+08:00">2024-05-19</time>
+      <time title="創建時間：2024-05-19 11:38:22 / 修改時間：23:14:27" itemprop="dateCreated datePublished" datetime="2024-05-19T11:38:22+08:00">2024-05-19</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -267,7 +269,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">文章字數：</span>
-      <span>227</span>
+      <span>242</span>
     </span>
     <span class="post-meta-item" title="所需閱讀時間">
       <span class="post-meta-item-icon">
@@ -286,16 +288,16 @@
     
     
     <div class="post-body" itemprop="articleBody"><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>在撰寫 php 的時候常常會需要產生隨機字串， 以下就介紹幾種生成隨機字串的方法</p>
-<h2 id="使用函式生成"><a href="#使用函式生成" class="headerlink" title="使用函式生成"></a>使用函式生成</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php</span><br><span class="line">function random_str_generator($len_of_gen_str)&#123;</span><br><span class="line">    $chars = &quot;0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz&quot;;</span><br><span class="line">    $var_size = strlen($chars);</span><br><span class="line">    $random_str = &quot;&quot;; // 初始化空字串</span><br><span class="line">        for ($x = 0; $x &lt; $len_of_gen_str; $x++) &#123;</span><br><span class="line">            $random_str .= $chars[rand(0, $var_size - 1)];</span><br><span class="line">        &#125;</span><br><span class="line">    return $random_str; // 回傳隨機字串</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">$random_str = random_str_generator(要產生的位元數);</span><br><span class="line"></span><br><span class="line">?&gt;</span><br></pre></td></tr></table></figure>
+<h2 id="使用函式生成"><a href="#使用函式生成" class="headerlink" title="使用函式生成"></a>使用函式生成</h2><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">random_str_generator</span>(<span class="params"><span class="variable">$len_of_gen_str</span></span>)</span>&#123;</span><br><span class="line">    <span class="variable">$chars</span> = <span class="string">&quot;0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz&quot;</span>;</span><br><span class="line">    <span class="variable">$var_size</span> = <span class="title function_ invoke__">strlen</span>(<span class="variable">$chars</span>);</span><br><span class="line">    <span class="variable">$random_str</span> = <span class="string">&quot;&quot;</span>; <span class="comment">// 初始化空字串</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="variable">$x</span> = <span class="number">0</span>; <span class="variable">$x</span> &lt; <span class="variable">$len_of_gen_str</span>; <span class="variable">$x</span>++) &#123;</span><br><span class="line">            <span class="variable">$random_str</span> .= <span class="variable">$chars</span>[<span class="title function_ invoke__">rand</span>(<span class="number">0</span>, <span class="variable">$var_size</span> - <span class="number">1</span>)];</span><br><span class="line">        &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="variable">$random_str</span>; <span class="comment">// 回傳隨機字串</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="variable">$random_str</span> = <span class="title function_ invoke__">random_str_generator</span>(要產生的位元數);</span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
 
 
 <h2 id="使用-str-shuffle-跟-substr-函數"><a href="#使用-str-shuffle-跟-substr-函數" class="headerlink" title="使用 str_shuffle() 跟 substr() 函數"></a>使用 str_shuffle() 跟 substr() 函數</h2><p>str_shuffle 是 php 內建函式，主要是將字串隨機打亂，然後使用 substr 函式去抓取所需的位元數</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$start = 0;</span><br><span class="line">$end = 20;</span><br><span class="line">$Strings = &#x27;0123456789abcdefghijklmnopqrstuvwxyz&#x27;;</span><br><span class="line">$random_str = substr(str_shuffle($Strings), $x, $y);</span><br></pre></td></tr></table></figure>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line">    <span class="variable">$start</span> = <span class="number">0</span>;</span><br><span class="line">    <span class="variable">$end</span> = <span class="number">20</span>;</span><br><span class="line">    <span class="variable">$Strings</span> = <span class="string">&#x27;0123456789abcdefghijklmnopqrstuvwxyz&#x27;</span>;</span><br><span class="line">    <span class="variable">$random_str</span> = <span class="title function_ invoke__">substr</span>(<span class="title function_ invoke__">str_shuffle</span>(<span class="variable">$Strings</span>), <span class="variable">$x</span>, <span class="variable">$y</span>);</span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
 
 <h2 id="使用-md5-或-sha1-函數"><a href="#使用-md5-或-sha1-函數" class="headerlink" title="使用 md5  或 sha1 函數"></a>使用 md5  或 sha1 函數</h2><p>使用 md5  或 sha1 搭配  time() 函式使用</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$random_str =  md5(time());</span><br><span class="line"> </span><br><span class="line">$random_str = sha1(time());</span><br></pre></td></tr></table></figure>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line">    <span class="variable">$random_str</span> =  <span class="title function_ invoke__">md5</span>(<span class="title function_ invoke__">time</span>());</span><br><span class="line">    <span class="variable">$random_str</span> = <span class="title function_ invoke__">sha1</span>(<span class="title function_ invoke__">time</span>());</span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
 
-<h2 id="使用-uniqid-函式"><a href="#使用-uniqid-函式" class="headerlink" title="使用 uniqid() 函式"></a>使用 uniqid() 函式</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$random_str = uniqid();</span><br></pre></td></tr></table></figure>
+<h2 id="使用-uniqid-函式"><a href="#使用-uniqid-函式" class="headerlink" title="使用 uniqid() 函式"></a>使用 uniqid() 函式</h2><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line">    <span class="variable">$random_str</span> = <span class="title function_ invoke__">uniqid</span>();</span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
 
 <h2 id="結語"><a href="#結語" class="headerlink" title="結語"></a>結語</h2><p>上文提供了4種不同產生隨機字串的方法，前兩種只是單純的產生隨機字串，如果要避免產生重複的字串推薦使用下面兩種方法</p>
 
@@ -319,6 +321,9 @@
                 </a>
             </div>
             <div class="post-nav-item">
+                <a href="/2024/05/19/hexo-next/" rel="next" title="Hexo 設定 及 next 主題設定">
+                  Hexo 設定 及 next 主題設定 <i class="fa fa-angle-right"></i>
+                </a>
             </div>
           </div>
     </footer>
@@ -347,7 +352,7 @@
     <span class="with-love">
       <i class="fa fa-heart"></i>
     </span>
-    <span class="author" itemprop="copyrightHolder">2024  Nilson | CC BY-NC 4.0</span>
+    <span class="author" itemprop="copyrightHolder">Nilson | CC BY-NC 4.0</span>
   </div>
 <div class="wordcount">
   <span class="post-meta-item">
@@ -360,7 +365,7 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="所需總閱讀時間">6 分鐘</span>
+    <span title="所需總閱讀時間">9 分鐘</span>
   </span>
 </div>
 
