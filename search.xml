@@ -229,7 +229,7 @@
       </tags>
   </entry>
   <entry>
-    <title>Boostrap</title>
+    <title>Boostrap 介紹</title>
     <url>/2024/05/20/boostrap/</url>
     <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>Boostrap 是一個非常受歡迎的 CSS framework ，他可以很輕易的做到 RWD 跟提供很多現成的套件能美化及呈現一些動畫特效</p>
 <h2 id="Boostrap-安裝"><a href="#Boostrap-安裝" class="headerlink" title="Boostrap 安裝"></a>Boostrap 安裝</h2><p>在一般不使用框架的情況下，Boostrap 安裝主要有兩種方法</p>
@@ -246,6 +246,26 @@
       </categories>
       <tags>
         <tag>boostrap</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>php 處理日期/時間相關的問題</title>
+    <url>/2024/05/20/php-date/</url>
+    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>在 php 處理時間上算是簡單，但是版主在寫案子的時候常會遇到一些短時間沒辦法以直覺想出來的寫法，所以寫成這一篇，之後如果要用就可以直接拿來用了</p>
+<h2 id="印出開始時間到結束時間"><a href="#印出開始時間到結束時間" class="headerlink" title="印出開始時間到結束時間"></a>印出開始時間到結束時間</h2><p>有些時候要印出連續一個禮拜的時間，就可以用 while 迴圈實現</p>
+<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="variable">$start_date</span> = <span class="keyword">new</span> <span class="title class_">DateTime</span>(<span class="string">&quot;2023-06-28&quot;</span>);</span><br><span class="line"><span class="variable">$end_date</span> = <span class="keyword">new</span> <span class="title class_">DateTime</span>(<span class="string">&quot;2023-07-28&quot;</span>);</span><br><span class="line"><span class="variable">$date_chace</span> = <span class="variable">$start_date</span> ;</span><br><span class="line"><span class="keyword">while</span>(<span class="variable">$date_chace</span>  &lt;=  <span class="variable">$end_date</span> )&#123;</span><br><span class="line">    <span class="keyword">echo</span> <span class="variable">$date_chace</span>  -&gt; <span class="title function_ invoke__">format</span>(<span class="string">&quot;Y-m-d&quot;</span>).<span class="string">&quot;</span></span><br><span class="line"><span class="string">&quot;</span>;</span><br><span class="line">  <span class="variable">$date_chace</span> -&gt; <span class="title function_ invoke__">modify</span>(<span class="string">&quot;+1 day&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+<h2 id="當周開始及結束時間"><a href="#當周開始及結束時間" class="headerlink" title="當周開始及結束時間"></a>當周開始及結束時間</h2><p>可以給一個時間然後得出當週的第一天跟最後一天</p>
+<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span> </span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getweek_fday_lday</span>(<span class="params"><span class="variable">$thisday</span></span>)</span>&#123;</span><br><span class="line"><span class="comment">//取得thisday 為禮拜幾 0-6</span></span><br><span class="line">   <span class="variable">$weekday</span> = <span class="title function_ invoke__">date</span>(<span class="string">&quot;w&quot;</span>, <span class="title function_ invoke__">strtotime</span>(<span class="variable">$thisday</span>));</span><br><span class="line">   <span class="comment">//該週的第一天</span></span><br><span class="line">   <span class="variable">$week_fday</span> = <span class="title function_ invoke__">date</span>(<span class="string">&quot;Y-m-d&quot;</span>, <span class="title function_ invoke__">strtotime</span>(<span class="string">&quot;<span class="subst">$thisday</span> -&quot;</span>.<span class="variable">$weekday</span>.<span class="string">&quot; days&quot;</span>));</span><br><span class="line">   <span class="comment">//該週的最後一天</span></span><br><span class="line">   <span class="variable">$week_lday</span> = <span class="title function_ invoke__">date</span>(<span class="string">&quot;Y-m-d&quot;</span>, <span class="title function_ invoke__">strtotime</span>(<span class="string">&quot;<span class="subst">$week_fday</span> +6 days&quot;</span>));</span><br><span class="line">   <span class="comment">//回傳 日期,該日期當週的第一天,該日期當週的最後一天</span></span><br><span class="line">   <span class="keyword">return</span> <span class="keyword">array</span>(<span class="string">&#x27;this_day&#x27;</span>=&gt;<span class="variable">$thisday</span>,<span class="string">&#x27;week_first_day&#x27;</span>=&gt;<span class="variable">$week_fday</span>,<span class="string">&#x27;week_last_day&#x27;</span>=&gt;<span class="variable">$week_lday</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="title function_ invoke__">var_dump</span>(<span class="title function_ invoke__">getweek_fday_lday</span>(<span class="title function_ invoke__">date</span>(<span class="string">&quot;Y-m-d&quot;</span>)));</span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="總結"><a href="#總結" class="headerlink" title="總結"></a>總結</h2><p>以上是版主想到的方法，如果有更好的寫法，也請不吝嗇告知～～</p>
+]]></content>
+      <categories>
+        <category>php</category>
+      </categories>
+      <tags>
+        <tag>php</tag>
       </tags>
   </entry>
 </search>
