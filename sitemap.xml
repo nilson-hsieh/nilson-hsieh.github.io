@@ -2,9 +2,18 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://blog.nilson-hsieh.me/2024/05/20/boostrap/</loc>
+    
+    <lastmod>2024-05-20</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://blog.nilson-hsieh.me/2024/05/19/hexo-next/</loc>
     
-    <lastmod>2024-05-19</lastmod>
+    <lastmod>2024-05-20</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -103,7 +112,7 @@
 
   <url>
     <loc>https://blog.nilson-hsieh.me/</loc>
-    <lastmod>2024-05-19</lastmod>
+    <lastmod>2024-05-20</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -111,28 +120,35 @@
   
   <url>
     <loc>https://blog.nilson-hsieh.me/tags/hexo/</loc>
-    <lastmod>2024-05-19</lastmod>
+    <lastmod>2024-05-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.nilson-hsieh.me/tags/%E9%96%8B%E6%BA%90%E8%BB%9F%E9%AB%94/</loc>
-    <lastmod>2024-05-19</lastmod>
+    <lastmod>2024-05-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.nilson-hsieh.me/tags/php/</loc>
-    <lastmod>2024-05-19</lastmod>
+    <lastmod>2024-05-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.nilson-hsieh.me/tags/mysql/</loc>
-    <lastmod>2024-05-19</lastmod>
+    <lastmod>2024-05-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.nilson-hsieh.me/tags/boostrap/</loc>
+    <lastmod>2024-05-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
@@ -141,14 +157,21 @@
   
   <url>
     <loc>https://blog.nilson-hsieh.me/categories/hexo/</loc>
-    <lastmod>2024-05-19</lastmod>
+    <lastmod>2024-05-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.nilson-hsieh.me/categories/php/</loc>
-    <lastmod>2024-05-19</lastmod>
+    <lastmod>2024-05-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.nilson-hsieh.me/categories/boostrap/</loc>
+    <lastmod>2024-05-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
