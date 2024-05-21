@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://blog.nilson-hsieh.me/2024/05/20/boostrap/</loc>
+    <loc>https://blog.nilson-hsieh.me/2024/05/21/git-intr/</loc>
     
     <lastmod>2024-05-21</lastmod>
     
@@ -13,7 +13,16 @@
   <url>
     <loc>https://blog.nilson-hsieh.me/2024/05/20/php-date/</loc>
     
-    <lastmod>2024-05-20</lastmod>
+    <lastmod>2024-05-21</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.nilson-hsieh.me/2024/05/20/boostrap/</loc>
+    
+    <lastmod>2024-05-21</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -162,6 +171,13 @@
     <priority>0.2</priority>
   </url>
   
+  <url>
+    <loc>https://blog.nilson-hsieh.me/tags/Git/</loc>
+    <lastmod>2024-05-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
 
   
   <url>
@@ -180,6 +196,13 @@
   
   <url>
     <loc>https://blog.nilson-hsieh.me/categories/bootstrap/</loc>
+    <lastmod>2024-05-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.nilson-hsieh.me/categories/Git/</loc>
     <lastmod>2024-05-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>

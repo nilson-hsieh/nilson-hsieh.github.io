@@ -253,7 +253,7 @@
     <url>/2024/05/20/php-date/</url>
     <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>在 php 處理時間上算是簡單，但是版主在寫案子的時候常會遇到一些短時間沒辦法以直覺想出來的寫法，所以寫成這一篇，之後如果要用就可以直接拿來用了</p>
 <h2 id="印出開始時間到結束時間"><a href="#印出開始時間到結束時間" class="headerlink" title="印出開始時間到結束時間"></a>印出開始時間到結束時間</h2><p>有些時候要印出連續一個禮拜的時間，就可以用 while 迴圈實現</p>
-<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="variable">$start_date</span> = <span class="keyword">new</span> <span class="title class_">DateTime</span>(<span class="string">&quot;2023-06-28&quot;</span>);</span><br><span class="line"><span class="variable">$end_date</span> = <span class="keyword">new</span> <span class="title class_">DateTime</span>(<span class="string">&quot;2023-07-28&quot;</span>);</span><br><span class="line"><span class="variable">$date_chace</span> = <span class="variable">$start_date</span> ;</span><br><span class="line"><span class="keyword">while</span>(<span class="variable">$date_chace</span>  &lt;=  <span class="variable">$end_date</span> )&#123;</span><br><span class="line">    <span class="keyword">echo</span> <span class="variable">$date_chace</span>  -&gt; <span class="title function_ invoke__">format</span>(<span class="string">&quot;Y-m-d&quot;</span>).<span class="string">&quot;</span></span><br><span class="line"><span class="string">&quot;</span>;</span><br><span class="line">  <span class="variable">$date_chace</span> -&gt; <span class="title function_ invoke__">modify</span>(<span class="string">&quot;+1 day&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="variable">$start_date</span> = <span class="keyword">new</span> <span class="title class_">DateTime</span>(<span class="string">&quot;2023-06-28&quot;</span>);</span><br><span class="line"><span class="variable">$end_date</span> = <span class="keyword">new</span> <span class="title class_">DateTime</span>(<span class="string">&quot;2023-07-28&quot;</span>);</span><br><span class="line"><span class="variable">$date_chace</span> = <span class="variable">$start_date</span> ;</span><br><span class="line"><span class="keyword">while</span>(<span class="variable">$date_chace</span>  &lt;=  <span class="variable">$end_date</span> )&#123;</span><br><span class="line">    <span class="keyword">echo</span> <span class="variable">$date_chace</span>  -&gt; <span class="title function_ invoke__">format</span>(<span class="string">&quot;Y-m-d&quot;</span>);</span><br><span class="line">    <span class="variable">$date_chace</span> -&gt; <span class="title function_ invoke__">modify</span>(<span class="string">&quot;+1 day&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
 
 
 <h2 id="當周開始及結束時間"><a href="#當周開始及結束時間" class="headerlink" title="當周開始及結束時間"></a>當周開始及結束時間</h2><p>可以給一個時間然後得出當週的第一天跟最後一天</p>
@@ -266,6 +266,60 @@
       </categories>
       <tags>
         <tag>php</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Git 介紹</title>
+    <url>/2024/05/21/git-intr/</url>
+    <content><![CDATA[<h2 id="Git-是什麼？"><a href="#Git-是什麼？" class="headerlink" title="Git 是什麼？"></a>Git 是什麼？</h2><p>常常做報告、做文件，但是不一定可以一次就順利完成，不免會有一些修改，就會常常出現下圖這種情況，導致檔案常常很亂</p>
+<img src="./01.png" width="60%" >
+
+<p>Git 是一個可以用來做版本控制的工具，可以讓在撰寫文件或程式的時候保留以前的版本，透過 Git 可以隨時回到過去的版本比對資料的差異</p>
+<h2 id="Git-的優點"><a href="#Git-的優點" class="headerlink" title="Git 的優點"></a>Git 的優點</h2><ul>
+<li>Git 為分散式版本控制系統。</li>
+<li>免費開源</li>
+<li>速度快</li>
+</ul>
+<h2 id="Git-安裝"><a href="#Git-安裝" class="headerlink" title="Git 安裝"></a>Git 安裝</h2><p>前往 <a href="https://git-scm.com/book/zh-tw/v2/%E9%96%8B%E5%A7%8B-Git-%E5%AE%89%E8%A3%9D%E6%95%99%E5%AD%B8">git 官網</a> 查看安裝說明</p>
+<h2 id="Git-怎麼開始呢"><a href="#Git-怎麼開始呢" class="headerlink" title="Git 怎麼開始呢"></a>Git 怎麼開始呢</h2><p>在要版本控制的資料夾執行以下 git 指令，可以將 git 初始化</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ git init</span><br></pre></td></tr></table></figure>
+
+<p>完成 git 初始化後會自動產生一個 .git 的隱藏欓，可以執行以下 Git 指令查看 Git 是不是真的在運行</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ git status</span><br></pre></td></tr></table></figure>
+
+<img src="./02.png" width="80%" >
+上面圖片主要做了四個動作
+
+<ul>
+<li>第一步 先列出資料夾內容(顯示這資料是空的)</li>
+<li>第二步 執行 git 初始化指令</li>
+<li>第三步 列出所有資料夾發現多了一個 .git 的隱藏欓</li>
+<li>第四步 執行 git status 查看 git 狀態</li>
+</ul>
+<p>這樣 git 就可以開始使用了</p>
+<h2 id="Git-常用指令"><a href="#Git-常用指令" class="headerlink" title="Git 常用指令"></a>Git 常用指令</h2><h3 id="add-將檔案加進版控"><a href="#add-將檔案加進版控" class="headerlink" title="add 將檔案加進版控"></a>add 將檔案加進版控</h3><p>可以直接使用 . 將整個資料夾加進去，也可以直接加那個檔案</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ git add .</span><br><span class="line">$ git add test.txt</span><br></pre></td></tr></table></figure>
+<h3 id="commit-新增檔案修改備註"><a href="#commit-新增檔案修改備註" class="headerlink" title="commit 新增檔案修改備註"></a>commit 新增檔案修改備註</h3><p>這修改內容主要是方便自己或者是別人再回來閱讀的時候看出修改的內容</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ git commit -m &quot;修改內容&quot;</span><br></pre></td></tr></table></figure>
+<h3 id="log-查看版本編號，commit-等等的內容"><a href="#log-查看版本編號，commit-等等的內容" class="headerlink" title="log 查看版本編號，commit 等等的內容"></a>log 查看版本編號，commit 等等的內容</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ git log</span><br></pre></td></tr></table></figure>
+
+<h3 id="branch-新增分支"><a href="#branch-新增分支" class="headerlink" title="branch 新增分支"></a>branch 新增分支</h3><p>初始化後會自動生成一個 master 分支，如果需要新增分支，可以使用以下程式</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ git branch &quot;分支名稱&quot;</span><br></pre></td></tr></table></figure>
+
+<p>切換在不同分支上面的檔案是不會互相影響，也就是說在其他分支上修改的內容是不會影響到 master 分支的<br><img src="./03.svg" width="80%" ></p>
+<h3 id="checkout-分支-版本切換"><a href="#checkout-分支-版本切換" class="headerlink" title="checkout 分支&#x2F;版本切換"></a>checkout 分支&#x2F;版本切換</h3><p>分支名稱&#x2F;分支名稱 不用打全名，只需要打前幾位就可以切換了</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ git checkout &quot;分支名稱/分支名稱&quot;</span><br></pre></td></tr></table></figure>
+<h3 id="diff-比較版本的不同"><a href="#diff-比較版本的不同" class="headerlink" title="diff 比較版本的不同"></a>diff 比較版本的不同</h3><p>提交 commit 後就可以透過下面的語法去比較兩個版本的差異，這邊一樣只需要打前幾位就可以了</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ git diff 版本邊號 版本編號</span><br></pre></td></tr></table></figure>
+
+<h2 id="結語"><a href="#結語" class="headerlink" title="結語"></a>結語</h2><p>這篇主要是 Git 的基本使用，之後會再有另一篇提到說 github 是什麼？要如何更進階的使用 Git </p>
+]]></content>
+      <categories>
+        <category>Git</category>
+      </categories>
+      <tags>
+        <tag>開源軟體</tag>
+        <tag>Git</tag>
       </tags>
   </entry>
 </search>

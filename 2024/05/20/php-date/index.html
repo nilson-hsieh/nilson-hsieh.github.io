@@ -28,7 +28,7 @@
 <meta property="og:description" content="在 php 處理時間上算是簡單，但是版主在寫案子的時候常會遇到一些短時間沒辦法以直覺想出來的寫法，所以寫成這一篇，之後如果要用就可以直接拿來用...">
 <meta property="og:locale" content="zh_TW">
 <meta property="article:published_time" content="2024-05-20T12:52:46.000Z">
-<meta property="article:modified_time" content="2024-05-20T13:39:12.638Z">
+<meta property="article:modified_time" content="2024-05-21T03:21:01.060Z">
 <meta property="article:author" content="nilson">
 <meta property="article:tag" content="php">
 <meta name="twitter:card" content="summary">
@@ -155,18 +155,18 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">8</span>
+          <span class="site-state-item-count">9</span>
           <span class="site-state-item-name">文章</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
           <a href="/categories/">
-        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-count">4</span>
         <span class="site-state-item-name">分類</span></a>
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">5</span>
+        <span class="site-state-item-count">6</span>
         <span class="site-state-item-name">標籤</span></a>
       </div>
   </nav>
@@ -235,9 +235,15 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">發表於</span>
-      
 
-      <time title="創建時間：2024-05-20 20:52:46 / 修改時間：21:39:12" itemprop="dateCreated datePublished" datetime="2024-05-20T20:52:46+08:00">2024-05-20</time>
+      <time title="創建時間：2024-05-20 20:52:46" itemprop="dateCreated datePublished" datetime="2024-05-20T20:52:46+08:00">2024-05-20</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新於</span>
+      <time title="修改時間：2024-05-21 11:21:01" itemprop="dateModified" datetime="2024-05-21T11:21:01+08:00">2024-05-21</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -289,7 +295,7 @@
     
     <div class="post-body" itemprop="articleBody"><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>在 php 處理時間上算是簡單，但是版主在寫案子的時候常會遇到一些短時間沒辦法以直覺想出來的寫法，所以寫成這一篇，之後如果要用就可以直接拿來用了</p>
 <h2 id="印出開始時間到結束時間"><a href="#印出開始時間到結束時間" class="headerlink" title="印出開始時間到結束時間"></a>印出開始時間到結束時間</h2><p>有些時候要印出連續一個禮拜的時間，就可以用 while 迴圈實現</p>
-<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="variable">$start_date</span> = <span class="keyword">new</span> <span class="title class_">DateTime</span>(<span class="string">&quot;2023-06-28&quot;</span>);</span><br><span class="line"><span class="variable">$end_date</span> = <span class="keyword">new</span> <span class="title class_">DateTime</span>(<span class="string">&quot;2023-07-28&quot;</span>);</span><br><span class="line"><span class="variable">$date_chace</span> = <span class="variable">$start_date</span> ;</span><br><span class="line"><span class="keyword">while</span>(<span class="variable">$date_chace</span>  &lt;=  <span class="variable">$end_date</span> )&#123;</span><br><span class="line">    <span class="keyword">echo</span> <span class="variable">$date_chace</span>  -&gt; <span class="title function_ invoke__">format</span>(<span class="string">&quot;Y-m-d&quot;</span>).<span class="string">&quot;</span></span><br><span class="line"><span class="string">&quot;</span>;</span><br><span class="line">  <span class="variable">$date_chace</span> -&gt; <span class="title function_ invoke__">modify</span>(<span class="string">&quot;+1 day&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="variable">$start_date</span> = <span class="keyword">new</span> <span class="title class_">DateTime</span>(<span class="string">&quot;2023-06-28&quot;</span>);</span><br><span class="line"><span class="variable">$end_date</span> = <span class="keyword">new</span> <span class="title class_">DateTime</span>(<span class="string">&quot;2023-07-28&quot;</span>);</span><br><span class="line"><span class="variable">$date_chace</span> = <span class="variable">$start_date</span> ;</span><br><span class="line"><span class="keyword">while</span>(<span class="variable">$date_chace</span>  &lt;=  <span class="variable">$end_date</span> )&#123;</span><br><span class="line">    <span class="keyword">echo</span> <span class="variable">$date_chace</span>  -&gt; <span class="title function_ invoke__">format</span>(<span class="string">&quot;Y-m-d&quot;</span>);</span><br><span class="line">    <span class="variable">$date_chace</span> -&gt; <span class="title function_ invoke__">modify</span>(<span class="string">&quot;+1 day&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
 
 
 <h2 id="當周開始及結束時間"><a href="#當周開始及結束時間" class="headerlink" title="當周開始及結束時間"></a>當周開始及結束時間</h2><p>可以給一個時間然後得出當週的第一天跟最後一天</p>
@@ -317,6 +323,9 @@
                 </a>
             </div>
             <div class="post-nav-item">
+                <a href="/2024/05/21/git-intr/" rel="next" title="Git 介紹">
+                  Git 介紹 <i class="fa fa-angle-right"></i>
+                </a>
             </div>
           </div>
     </footer>
@@ -358,7 +367,7 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="所需總閱讀時間">10 分鐘</span>
+    <span title="所需總閱讀時間">13 分鐘</span>
   </span>
 </div>
 
