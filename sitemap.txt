@@ -1,3 +1,4 @@
+https://blog.nilson-hsieh.me/2024/05/26/font-end-DataTables/
 https://blog.nilson-hsieh.me/2024/05/25/git-github/
 https://blog.nilson-hsieh.me/2024/05/21/git-intr/
 https://blog.nilson-hsieh.me/2024/05/20/php-date/
@@ -25,3 +26,4 @@ https://blog.nilson-hsieh.me/categories/hexo/
 https://blog.nilson-hsieh.me/categories/php/
 https://blog.nilson-hsieh.me/categories/bootstrap/
 https://blog.nilson-hsieh.me/categories/Git/
+https://blog.nilson-hsieh.me/categories/%E7%B6%B2%E9%A0%81%E5%89%8D%E7%AB%AF%E5%A5%97%E4%BB%B6/
