@@ -203,6 +203,27 @@
     <priority>0.2</priority>
   </url>
   
+  <url>
+    <loc>https://blog.nilson-hsieh.me/tags/%E7%B6%B2%E9%A0%81%E5%89%8D%E7%AB%AF%E5%A5%97%E4%BB%B6/</loc>
+    <lastmod>2024-05-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.nilson-hsieh.me/tags/java-script/</loc>
+    <lastmod>2024-05-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.nilson-hsieh.me/tags/css/</loc>
+    <lastmod>2024-05-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
 
   
   <url>
