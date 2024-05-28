@@ -527,4 +527,45 @@
         <tag>css</tag>
       </tags>
   </entry>
+  <entry>
+    <title>google 地球飛行模式</title>
+    <url>/2024/05/28/google-earth-airplan/</url>
+    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>偶然之間，再玩 google 地球的時候發現可以開飛機!!!，沒聽錯，不僅僅免費而且還有兩種機型可以選擇，讓我們來看看怎麼使用吧…</p>
+<h2 id="安裝"><a href="#安裝" class="headerlink" title="安裝"></a>安裝</h2><p>目前這功能只有應用程式版．網頁版還沒辦法，那我們現在就來安裝吧</p>
+<p>我們先到 google 地球的 <a href="https://www.google.com/intl/zh-TW_ALL/earth/versions/">首頁</a> 上方 Google 地球版本，下載 Google Earth Pro 電腦版 </p>
+<img src="./01.jpg" width="80%" >
+
+
+<h2 id="開始遊戲"><a href="#開始遊戲" class="headerlink" title="開始遊戲"></a>開始遊戲</h2><p>完成安裝後點開，再上方工具列選擇 “工具” 接者點選 “進入飛行模擬模式”</p>
+<img src="./02.png" width="80%" >
+
+<p>進入後有兩種飛機的型號可以選擇，飛機選擇完後選擇起飛的機場，就可以開始飛行了</p>
+<p>這邊官方給的建議</p>
+<blockquote>
+<p>如果您是新手飛行員，請使用 SR22 來學習如何飛行。<br>如果您是經驗豐富的飛行員，請使用 F-16 來筆直爬升並持續推進。</p>
+</blockquote>
+<img src="./03.jpg" width="50%" >
+
+<h2 id="操作說明"><a href="#操作說明" class="headerlink" title="操作說明"></a>操作說明</h2><h3 id="起飛"><a href="#起飛" class="headerlink" title="起飛"></a>起飛</h3><ol>
+<li>按下 Page Up 鍵，飛機就會開始在跑道上滑行。</li>
+<li>滑鼠在中間稍微向下移動，飛機就會慢慢起飛</li>
+</ol>
+<img src="./04.jpg" width="60%" >
+
+<h2 id="改變方向"><a href="#改變方向" class="headerlink" title="改變方向"></a>改變方向</h2><p>使用箭頭左右來鍵改變飛機方向，但是轉彎的幅度不能太大，不然容易墜機</p>
+<h2 id="改變視野"><a href="#改變視野" class="headerlink" title="改變視野"></a>改變視野</h2><ol>
+<li>箭頭鍵 + Alt 鍵 (慢慢轉動)</li>
+<li>箭頭鍵 + Ctrl 鍵 (快速轉動)</li>
+</ol>
+<h2 id="看看遊戲畫面"><a href="#看看遊戲畫面" class="headerlink" title="看看遊戲畫面"></a>看看遊戲畫面</h2><img src="./05.png" width="75%" >
+
+<img src="./06.png" width="75%" >]]></content>
+      <categories>
+        <category>有趣資訊</category>
+      </categories>
+      <tags>
+        <tag>開源軟體</tag>
+        <tag>有趣資訊</tag>
+      </tags>
+  </entry>
 </search>
