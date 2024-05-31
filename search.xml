@@ -495,7 +495,7 @@
       </tags>
   </entry>
   <entry>
-    <title>日曆神器 fullcalendar</title>
+    <title>日曆神器 Fullcalendar</title>
     <url>/2024/05/26/font-end-fullcalendar/</url>
     <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>在做日曆的時候還在慢慢用表格刻嗎？今天推薦一個套件可以直接很輕易的完成日曆，而且可以很輕易的新增事件項目</p>
 <h2 id="套件安裝"><a href="#套件安裝" class="headerlink" title="套件安裝"></a>套件安裝</h2><p>在 header 引入 fullcalendar 的 CSS</p>
@@ -528,7 +528,7 @@
       </tags>
   </entry>
   <entry>
-    <title>google 地球飛行模式</title>
+    <title>Google 地球飛行模式</title>
     <url>/2024/05/28/google-earth-airplan/</url>
     <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>偶然之間，再玩 google 地球的時候發現可以開飛機!!!，沒聽錯，不僅僅免費而且還有兩種機型可以選擇，讓我們來看看怎麼使用吧…</p>
 <h2 id="安裝"><a href="#安裝" class="headerlink" title="安裝"></a>安裝</h2><p>目前這功能只有應用程式版．網頁版還沒辦法，那我們現在就來安裝吧</p>
@@ -569,7 +569,7 @@
       </tags>
   </entry>
   <entry>
-    <title>bootstrap 彈出式視窗</title>
+    <title>Bootstrap 彈出式視窗</title>
     <url>/2024/05/31/boostrap-modal/</url>
     <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>在做網頁的時候常常會需要做到彈跳出來的感覺，這時候如果使用一般得 js 跟 html 會蠻麻煩的，如果使用 bootstrap 框架就可以很輕易的用 modal 完成</p>
 <img src="./01.jpg" width="80%" >
