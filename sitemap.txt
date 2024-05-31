@@ -1,3 +1,4 @@
+https://blog.nilson-hsieh.me/2024/05/31/boostrap-modal/
 https://blog.nilson-hsieh.me/2024/05/28/google-earth-airplan/
 https://blog.nilson-hsieh.me/2024/05/26/font-end-fullcalendar/
 https://blog.nilson-hsieh.me/2024/05/26/font-end-DataTables/
