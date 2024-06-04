@@ -561,11 +561,11 @@
 
 <img src="./06.png" width="75%" >]]></content>
       <categories>
-        <category>有趣資訊</category>
+        <category>其他資訊相關</category>
       </categories>
       <tags>
         <tag>開源軟體</tag>
-        <tag>有趣資訊</tag>
+        <tag>其他資訊相關</tag>
       </tags>
   </entry>
   <entry>
@@ -677,11 +677,45 @@
 <h3 id="結語"><a href="#結語" class="headerlink" title="結語"></a>結語</h3><p>PWA 現在算是蠻熱門的一種 App 製作方式，功能非常的強大但事實作起來並不難，所以推薦給大家嘗試看看</p>
 ]]></content>
       <categories>
-        <category>有趣資訊</category>
+        <category>其他資訊相關</category>
       </categories>
       <tags>
         <tag>開源軟體</tag>
-        <tag>有趣資訊</tag>
+        <tag>其他資訊相關</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>加快瀏覽器收錄你的網站</title>
+    <url>/2024/06/04/creat-sitemap/</url>
+    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>最近常常會遇到顧客說要怎麼加速瀏覽器收錄自己的網站，這篇就來教學如何將網站地圖( sitemap ) 提交給 google 瀏覽器，讓他更快收入網站內容</p>
+<h2 id="什麼是-Google-Search-Console"><a href="#什麼是-Google-Search-Console" class="headerlink" title="什麼是 Google Search Console"></a>什麼是 Google Search Console</h2><p> Google Search Console 是Google 推出的網站管理工具，可提交網站地圖，告訴瀏覽器整個網站抓取的頻率、架構、網址等等，是做 SEO 非常重要的工具</p>
+<h2 id="製作網站地圖"><a href="#製作網站地圖" class="headerlink" title="製作網站地圖"></a>製作網站地圖</h2><p>網站地圖我們俗稱 sitemap ，我們這篇使用將使用網路上現成的 sitemap 生成器來製作 sitemap ，在下一篇將會更仔細的介紹sitemap 裡面的設定</p>
+<p>這邊有推薦幾個</p>
+<ul>
+<li><a href="https://www.xml-sitemaps.com/">https://www.xml-sitemaps.com/</a></li>
+<li><a href="https://www.ifreesite.com/sitemap-online.htm">線上Sitemap產生器</a></li>
+</ul>
+<p>這兩個網站對於剛開始起步的網站就非常的夠用了，只要輸入網址，他就會自動產生網站的 sitemap ，產完之後下載放到網站根目錄即可</p>
+<h2 id="驗證網址擁有權"><a href="#驗證網址擁有權" class="headerlink" title="驗證網址擁有權"></a>驗證網址擁有權</h2><p>這步驟者主要是 google 要確認是不是這個網址的管理員，我們前往 <a href="https://search.google.com/search-console">Google Search Console</a> 登入 google 帳號後右上角有新增資源</p>
+<p>驗證的方式有分兩種</p>
+<ul>
+<li>驗證網域</li>
+<li>驗證網址前置字元</li>
+</ul>
+<img src="./01.jpg" width="80%" >
+
+
+<h3 id="驗證網域"><a href="#驗證網域" class="headerlink" title="驗證網域"></a>驗證網域</h3><p>選擇驗證網域只能夠過 DNS 驗證，驗證過程中會一步一步的引導設定<br><img src="./02.jpg" width="80%" ></p>
+<h3 id="驗證網址前置字元"><a href="#驗證網址前置字元" class="headerlink" title="驗證網址前置字元"></a>驗證網址前置字元</h3><p>驗證網址前置字元的方法就比較多了，有 HTML 標記 、透過 GA 、透過 DNS 驗證，驗證過程中也是會一步一步的引導設定<br><img src="./03.jpg" width="80%" ></p>
+<p>驗證完成後就可以準備提交 sitemap 了</p>
+<h2 id="提交-sitemap"><a href="#提交-sitemap" class="headerlink" title="提交 sitemap"></a>提交 sitemap</h2><p>驗證完成後前往 左側選單 &gt; 產稱索引 &gt; sitemap<br><img src="./04.jpg" width="80%" ><br>新增 Sitemap 的欄位 打上剛剛第一步產生的 Sitemap 檔案名稱，按下新增</p>
+<p>完成新增後可以在 已提交的 Sitemap 查看到相關的資訊，看到完成後就可以等待瀏覽器抓取你的網站囉</p>
+]]></content>
+      <categories>
+        <category>SEO</category>
+      </categories>
+      <tags>
+        <tag>SEO</tag>
       </tags>
   </entry>
 </search>
