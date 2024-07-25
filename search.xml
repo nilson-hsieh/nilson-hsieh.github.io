@@ -756,4 +756,157 @@
         <tag>Linux</tag>
       </tags>
   </entry>
+  <entry>
+    <title>php 處理日期/時間相關的問題 2</title>
+    <url>/2024/07/25/php-date2/</url>
+    <content><![CDATA[<h2 id="php-時間格式轉換"><a href="#php-時間格式轉換" class="headerlink" title="php 時間格式轉換"></a>php 時間格式轉換</h2><p>透過 date 函式 加上 strtotime 函式調整日期顯示的方式</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$originalDate = &quot;2024-07-25&quot;;</span><br><span class="line">$timestamp = strtotime($originalDate);</span><br><span class="line">$newDate = date(&quot;m-d-Y&quot;, $timestamp );</span><br></pre></td></tr></table></figure>
+
+<h3 id="date-常用的-format-字元"><a href="#date-常用的-format-字元" class="headerlink" title="date 常用的 format 字元"></a>date 常用的 format 字元</h3><table>
+<thead>
+<tr>
+<th align="center">format 字元</th>
+<th>說明</th>
+<th>返回值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">年</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td align="center">Y</td>
+<td>四位數字表示西元年份</td>
+<td>1999 或 2003</td>
+</tr>
+<tr>
+<td align="center">y</td>
+<td>二位數字表示西元年份</td>
+<td>99 或 03</td>
+</tr>
+<tr>
+<td align="center">L</td>
+<td>二位數字表示西元年份</td>
+<td>閏年輸出 1，非閏年輸出 0</td>
+</tr>
+<tr>
+<td align="center">月</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td align="center">F</td>
+<td>完整英文顯示月份</td>
+<td>January 到 December</td>
+</tr>
+<tr>
+<td align="center">M</td>
+<td>三個字母縮寫表示月份</td>
+<td>Jan 到 Dec</td>
+</tr>
+<tr>
+<td align="center">m</td>
+<td>數字表示月份，前面補零</td>
+<td>01 到 12</td>
+</tr>
+<tr>
+<td align="center">n</td>
+<td>數字表示月份，前面未補零</td>
+<td>1 到 12</td>
+</tr>
+<tr>
+<td align="center">t</td>
+<td>顯示當月有多少天</td>
+<td>28 到 31</td>
+</tr>
+<tr>
+<td align="center">日</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td align="center">d</td>
+<td>數字表示天數，前面補零</td>
+<td>01 到 31</td>
+</tr>
+<tr>
+<td align="center">D</td>
+<td>三個字母縮寫表示星期</td>
+<td>Mon 到 Sun</td>
+</tr>
+<tr>
+<td align="center">j</td>
+<td>數字表示天數，前面補零</td>
+<td>1 到 31</td>
+</tr>
+<tr>
+<td align="center">l（”L”的小寫）</td>
+<td>完整英文顯示星期</td>
+<td>Sunday 到 Saturday</td>
+</tr>
+<tr>
+<td align="center">w</td>
+<td>用 0-6 表示星期</td>
+<td>0（表示星期天）到 6（表示星期六）</td>
+</tr>
+<tr>
+<td align="center">時間</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td align="center">a</td>
+<td>小寫上午跟下午</td>
+<td>am 或 pm</td>
+</tr>
+<tr>
+<td align="center">A</td>
+<td>大寫上午跟下午</td>
+<td>AM 或 PM</td>
+</tr>
+<tr>
+<td align="center">g</td>
+<td>小時 ，12 小時制，前面未補零</td>
+<td>1 到 12</td>
+</tr>
+<tr>
+<td align="center">G</td>
+<td>小時 ，24 小時制，前面未補零</td>
+<td>0 到 23</td>
+</tr>
+<tr>
+<td align="center">h</td>
+<td>小時 ，12 小時制，前面補零</td>
+<td>01 到 12</td>
+</tr>
+<tr>
+<td align="center">H</td>
+<td>小時 ，24 小時制，前面補零</td>
+<td>00 到 23</td>
+</tr>
+<tr>
+<td align="center">i</td>
+<td>前面補零的分鐘數</td>
+<td>00 到 59</td>
+</tr>
+<tr>
+<td align="center">s</td>
+<td>前面補零的秒數</td>
+<td>00 到 59</td>
+</tr>
+</tbody></table>
+<p>以今天當基礎的時間加減</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">echo &quot;今天:&quot;,date(&quot;Y-m-d&quot;,time());</span><br><span class="line">echo &quot;昨天:&quot;,date(&quot;Y-m-d&quot;,strtotime(&quot;-1 day&quot;));</span><br><span class="line">echo &quot;明天:&quot;,date(&quot;Y-m-d&quot;,strtotime(&quot;+1 day&quot;))&quot;;</span><br><span class="line">echo &quot;一星期後:&quot;,date(&quot;Y-m-d&quot;,strtotime(&quot;+1 week&quot;));</span><br><span class="line">echo &quot;上月:&quot;.date(&quot;Y-m-d&quot;,strtotime(&quot;last month&quot;));</span><br><span class="line">echo &quot;下個月:&quot;.date(&quot;Y-m-d&quot;,strtotime(&quot;+1 month&quot;));</span><br><span class="line">echo &quot;十年後:&quot;.date(&quot;Y-m-d&quot;,strtotime(&quot;+10 year&quot;));</span><br></pre></td></tr></table></figure>
+
+<p>以特定時間當基礎的時間加減</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">echo date(&#x27;Y-m-d&#x27;, strtotime (&quot;+1 day&quot;, strtotime(&#x27;2024-07-25&#x27;)));</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>php</category>
+      </categories>
+      <tags>
+        <tag>php</tag>
+      </tags>
+  </entry>
 </search>
