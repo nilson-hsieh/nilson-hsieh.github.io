@@ -718,4 +718,42 @@
         <tag>SEO</tag>
       </tags>
   </entry>
+  <entry>
+    <title>Linux FTP 用戶端 - lftp</title>
+    <url>/2024/07/25/lftp/</url>
+    <content><![CDATA[<h2 id="安裝"><a href="#安裝" class="headerlink" title="安裝"></a>安裝</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo apt-get install lftp   # 對於基於 Debian 的系統</span><br><span class="line">sudo yum install lftp       # 對於基於 Red Hat 的系統</span><br></pre></td></tr></table></figure>
+
+<h2 id="連接到-FTP-伺服器"><a href="#連接到-FTP-伺服器" class="headerlink" title="連接到 FTP 伺服器"></a>連接到 FTP 伺服器</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">lftp -u username,password ftp.example.com</span><br></pre></td></tr></table></figure>
+
+<p>或者也可以先連線後再登入</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">lftp ftp.example.com</span><br><span class="line"># 提示輸入用戶名和密碼</span><br><span class="line">lftp ftp.example.com:~&gt; login username</span><br><span class="line">Password: password</span><br></pre></td></tr></table></figure>
+
+<h2 id="操作指令"><a href="#操作指令" class="headerlink" title="操作指令"></a>操作指令</h2><h3 id="顯示當前目錄內容"><a href="#顯示當前目錄內容" class="headerlink" title="顯示當前目錄內容"></a>顯示當前目錄內容</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">ls</span><br></pre></td></tr></table></figure>
+
+<h3 id="切換所在資料夾"><a href="#切換所在資料夾" class="headerlink" title="切換所在資料夾"></a>切換所在資料夾</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">cd directory_name</span><br></pre></td></tr></table></figure>
+
+<h3 id="查看當前資料夾"><a href="#查看當前資料夾" class="headerlink" title="查看當前資料夾"></a>查看當前資料夾</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">pwd</span><br></pre></td></tr></table></figure>
+
+<h3 id="資料夾"><a href="#資料夾" class="headerlink" title="資料夾"></a>資料夾</h3><h4 id="創建資料夾"><a href="#創建資料夾" class="headerlink" title="創建資料夾"></a>創建資料夾</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">mkdir directory_name</span><br></pre></td></tr></table></figure>
+
+<h4 id="刪除資料夾"><a href="#刪除資料夾" class="headerlink" title="刪除資料夾"></a>刪除資料夾</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">rmdir directory_name</span><br></pre></td></tr></table></figure>
+
+<h3 id="文件"><a href="#文件" class="headerlink" title="文件"></a>文件</h3><h4 id="下載文件"><a href="#下載文件" class="headerlink" title="下載文件"></a>下載文件</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">get file_name</span><br></pre></td></tr></table></figure>
+
+<h4 id="上傳文件"><a href="#上傳文件" class="headerlink" title="上傳文件"></a>上傳文件</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">put local_file_name</span><br></pre></td></tr></table></figure>
+
+<h4 id="刪除文件"><a href="#刪除文件" class="headerlink" title="刪除文件"></a>刪除文件</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">rm file_name</span><br></pre></td></tr></table></figure>
+
+<h3 id="查看空間使用情況"><a href="#查看空間使用情況" class="headerlink" title="查看空間使用情況"></a>查看空間使用情況</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">du -sh ./</span><br></pre></td></tr></table></figure>
+
+<h2 id="離開，關閉連線"><a href="#離開，關閉連線" class="headerlink" title="離開，關閉連線"></a>離開，關閉連線</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">exit</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>Linux</category>
+      </categories>
+      <tags>
+        <tag>開源軟體</tag>
+        <tag>Linux</tag>
+      </tags>
+  </entry>
 </search>
