@@ -1,32 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>PHP 程式介紹</title>
-    <url>/2025/03/26/php-intr/</url>
-    <content><![CDATA[<h2 id="PHP-介紹"><a href="#PHP-介紹" class="headerlink" title="PHP 介紹"></a>PHP 介紹</h2><p>PHP 全稱為 Hypertext Preprocessor (超文字預處理器)，他是開源的網頁程式。他的語法借鑑C語言、Java和Perl等流行電腦語言的特點，所以學習起來非常容易。</p>
-<h3 id="PHP的吉祥物名叫「elePHPant」"><a href="#PHP的吉祥物名叫「elePHPant」" class="headerlink" title="PHP的吉祥物名叫「elePHPant」"></a>PHP的吉祥物名叫「elePHPant」</h3><p>PHP的logo在一頭藍象的裡面，由文森·龐蒂爾(Vincent Pontier)在1998年設計。其設計概念是從側面看 PHP 像隻大象。當elePHPant被製作成毛絨玩具時，有時顏色會有不同。<br><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Webysther_20160423_-_Elephpant.svg/250px-Webysther_20160423_-_Elephpant.svg.png" wisth="50%"></p>
-<h3 id="PHP的用途"><a href="#PHP的用途" class="headerlink" title="PHP的用途"></a>PHP的用途</h3><p>PHP 主要用途為製作動態互動式網站、連線資料庫及 API 的建構，用途十分的廣泛。</p>
-<h2 id="為什麼學習-PHP"><a href="#為什麼學習-PHP" class="headerlink" title="為什麼學習 PHP"></a>為什麼學習 PHP</h2><p>以下列出幾點讓我當初選擇學習 PHP 的理由</p>
-<ul>
-<li>大量現有網站使用 PHP<br>根據統計，全世界超過 75% 的網站後端使用 PHP（包括 WordPress、Facebook 初期、維基百科等），這也就說在未來的維護市場還是很大。</li>
-<li>容易上手、語法簡單<br>PHP 是入門後端程式語言中最簡單的選擇之一，對初學者非常友好。</li>
-<li>WordPress、生態系龐大<br>做網站、部落格、購物車？超過 40% 的網站使用 WordPress，而它是 100% PHP 撰寫。</li>
-<li>成本低、部署方便<br>PHP 可以在便宜的虛擬主機或自己架設的 LAMP 環境運作，不需要複雜的環境配置。</li>
-</ul>
-<p>根據以上四點的分析，學習 PHP 的投資報酬蠻高的，就讓我們開始埋頭進到 PHP 的世界探索吧</p>
-<h2 id="參考資料"><a href="#參考資料" class="headerlink" title="參考資料"></a>參考資料</h2><ul>
-<li><a href="https://zh.wikipedia.org/zh-tw/PHP">維基百科</a></li>
-</ul>
-]]></content>
-      <categories>
-        <category>php 教學</category>
-      </categories>
-      <tags>
-        <tag>php</tag>
-        <tag>程式教學</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>PHP 入門</title>
     <url>/2025/03/26/php-c1/</url>
     <content><![CDATA[<h3 id="PHP-簡介"><a href="#PHP-簡介" class="headerlink" title="PHP 簡介"></a>PHP 簡介</h3><p>PHP 程式可以跟 HTML、CSS 等程式混用，但是檔名一定要 .php 。 PHP 程式是在主機上執行，透過主機將程式處理完之後才將結果傳給前端使用者，所以在前端網頁檢視原始碼看不到 PHP 程式。</p>
@@ -99,6 +73,32 @@
 <h3 id="do-while"><a href="#do-while" class="headerlink" title="do while"></a>do while</h3><p>do while 迴圈的格式為 <code>do&#123;程式區塊&#125;while(判斷式);</code></p>
 <figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span>  </span><br><span class="line">    <span class="comment">//設定 $loop 初始值為0</span></span><br><span class="line">    <span class="keyword">do</span>&#123;</span><br><span class="line">        <span class="keyword">echo</span> <span class="variable">$loop</span>;</span><br><span class="line">    &#125;<span class="keyword">while</span>(<span class="variable">$loop</span>&lt;<span class="number">10</span>); <span class="comment">//結尾要記得加;</span></span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
 <p>while 跟  do while 迴圈功能其實大同小異，但是 do while 會先執行一次之後判斷條件符合之後在繼續執行。<br>今天就先到這裡囉～ 明天繼續！！</p>
+]]></content>
+      <categories>
+        <category>php 教學</category>
+      </categories>
+      <tags>
+        <tag>php</tag>
+        <tag>程式教學</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>PHP 程式介紹</title>
+    <url>/2025/03/26/php-intr/</url>
+    <content><![CDATA[<h2 id="PHP-介紹"><a href="#PHP-介紹" class="headerlink" title="PHP 介紹"></a>PHP 介紹</h2><p>PHP 全稱為 Hypertext Preprocessor (超文字預處理器)，他是開源的網頁程式。他的語法借鑑C語言、Java和Perl等流行電腦語言的特點，所以學習起來非常容易。</p>
+<h3 id="PHP的吉祥物名叫「elePHPant」"><a href="#PHP的吉祥物名叫「elePHPant」" class="headerlink" title="PHP的吉祥物名叫「elePHPant」"></a>PHP的吉祥物名叫「elePHPant」</h3><p>PHP的logo在一頭藍象的裡面，由文森·龐蒂爾(Vincent Pontier)在1998年設計。其設計概念是從側面看 PHP 像隻大象。當elePHPant被製作成毛絨玩具時，有時顏色會有不同。<br><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Webysther_20160423_-_Elephpant.svg/250px-Webysther_20160423_-_Elephpant.svg.png" wisth="50%"></p>
+<h3 id="PHP的用途"><a href="#PHP的用途" class="headerlink" title="PHP的用途"></a>PHP的用途</h3><p>PHP 主要用途為製作動態互動式網站、連線資料庫及 API 的建構，用途十分的廣泛。</p>
+<h2 id="為什麼學習-PHP"><a href="#為什麼學習-PHP" class="headerlink" title="為什麼學習 PHP"></a>為什麼學習 PHP</h2><p>以下列出幾點讓我當初選擇學習 PHP 的理由</p>
+<ul>
+<li>大量現有網站使用 PHP<br>根據統計，全世界超過 75% 的網站後端使用 PHP（包括 WordPress、Facebook 初期、維基百科等），這也就說在未來的維護市場還是很大。</li>
+<li>容易上手、語法簡單<br>PHP 是入門後端程式語言中最簡單的選擇之一，對初學者非常友好。</li>
+<li>WordPress、生態系龐大<br>做網站、部落格、購物車？超過 40% 的網站使用 WordPress，而它是 100% PHP 撰寫。</li>
+<li>成本低、部署方便<br>PHP 可以在便宜的虛擬主機或自己架設的 LAMP 環境運作，不需要複雜的環境配置。</li>
+</ul>
+<p>根據以上四點的分析，學習 PHP 的投資報酬蠻高的，就讓我們開始埋頭進到 PHP 的世界探索吧</p>
+<h2 id="參考資料"><a href="#參考資料" class="headerlink" title="參考資料"></a>參考資料</h2><ul>
+<li><a href="https://zh.wikipedia.org/zh-tw/PHP">維基百科</a></li>
+</ul>
 ]]></content>
       <categories>
         <category>php 教學</category>
