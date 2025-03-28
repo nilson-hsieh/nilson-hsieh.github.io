@@ -1,3 +1,4 @@
+https://blog.nilson-hsieh.me/2025/03/27/php-function/
 https://blog.nilson-hsieh.me/about/index.html
 https://blog.nilson-hsieh.me/2025/03/26/php-ifelse/
 https://blog.nilson-hsieh.me/2025/03/26/php-ope/

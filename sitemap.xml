@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://blog.nilson-hsieh.me/2025/03/27/php-function/</loc>
+    
+    <lastmod>2025-03-28</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://blog.nilson-hsieh.me/about/index.html</loc>
     
     <lastmod>2025-03-27</lastmod>
@@ -76,7 +85,7 @@
 
   <url>
     <loc>https://blog.nilson-hsieh.me/</loc>
-    <lastmod>2025-03-27</lastmod>
+    <lastmod>2025-03-28</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -84,14 +93,14 @@
   
   <url>
     <loc>https://blog.nilson-hsieh.me/tags/php/</loc>
-    <lastmod>2025-03-27</lastmod>
+    <lastmod>2025-03-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.nilson-hsieh.me/tags/%E7%A8%8B%E5%BC%8F%E6%95%99%E5%AD%B8/</loc>
-    <lastmod>2025-03-27</lastmod>
+    <lastmod>2025-03-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
@@ -100,7 +109,7 @@
   
   <url>
     <loc>https://blog.nilson-hsieh.me/categories/php-%E6%95%99%E5%AD%B8/</loc>
-    <lastmod>2025-03-27</lastmod>
+    <lastmod>2025-03-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
