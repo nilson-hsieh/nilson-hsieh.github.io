@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>PHP 入門</title>
+    <url>/2025/03/26/php-c1/</url>
+    <content><![CDATA[<h3 id="PHP-簡介"><a href="#PHP-簡介" class="headerlink" title="PHP 簡介"></a>PHP 簡介</h3><p>PHP 程式可以跟 HTML、CSS 等程式混用，但是檔名一定要 .php 。 PHP 程式是在主機上執行，透過主機將程式處理完之後才將結果傳給前端使用者，所以在前端網頁檢視原始碼看不到 PHP 程式。</p>
+<h3 id="開頭跟結尾"><a href="#開頭跟結尾" class="headerlink" title="開頭跟結尾"></a>開頭跟結尾</h3><p>PHP 程式除了檔名要求 PHP 以外還需要開頭跟結尾用<code>&lt;?php ?&gt;</code>包起來，並且每段程式碼用 ; 做結尾。</p>
+<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span> </span><br><span class="line">    <span class="keyword">echo</span> <span class="string">&quot;我是簡易 PHP 範例&quot;</span>;</span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="變數"><a href="#變數" class="headerlink" title="變數"></a>變數</h3><p>在 PHP 語法裡變數不用另外的宣告，要以 $ 開頭。</p>
+<h4 id="變數宣告規則"><a href="#變數宣告規則" class="headerlink" title="變數宣告規則"></a>變數宣告規則</h4><ul>
+<li>大小寫視為不同</li>
+<li>變數只能使用英文字母、底線、數字(不能使用空白)</li>
+<li>開頭只能英文或底線，不能使用數字當開頭</li>
+<li>系統保留字不能用 如 array、while 其他 <a href="http://php.net/manual/en/reserved.keywords.php">保留字</a></li>
+</ul>
+<h4 id="變數型態"><a href="#變數型態" class="headerlink" title="變數型態"></a>變數型態</h4><ul>
+<li>整數(integer)</li>
+</ul>
+<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span> </span><br><span class="line">    <span class="variable">$number</span> = <span class="number">10</span>;</span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>字串(string)</li>
+</ul>
+<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span> </span><br><span class="line">    <span class="variable">$text</span> = <span class="string">&quot;我是字串&quot;</span>;</span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>布林值(booleam)</li>
+</ul>
+<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span> </span><br><span class="line">    <span class="variable">$bool</span> = True;</span><br><span class="line">    <span class="variable">$bool</span> = False;</span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>陣列(Arrays)-以數字當索引值</li>
+</ul>
+<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span> </span><br><span class="line">    <span class="variable">$arr</span>[<span class="number">0</span>] = <span class="string">&quot;我是陣列0&quot;</span>;</span><br><span class="line">    <span class="variable">$arr</span>[<span class="number">1</span>] = <span class="string">&quot;我是陣列1&quot;</span>;</span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>陣列(Arrays)-以字串當索引值(則字串稱為 鍵key)</li>
+</ul>
+<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span> </span><br><span class="line">    <span class="variable">$arr</span>[<span class="string">&#x27;red&#x27;</span>] = <span class="string">&quot;#ff0000&quot;</span>;</span><br><span class="line">    <span class="variable">$arr</span>[<span class="string">&#x27;green&#x27;</span>] = <span class="string">&quot;#00ff00&quot;</span>;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="comment">//使用時帶入 鍵key 就能得到值</span></span><br><span class="line">    <span class="keyword">echo</span> <span class="variable">$arr</span>[<span class="string">&#x27;green&#x27;</span>]; <span class="comment">//這樣會輸出 #00ff00</span></span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="註解"><a href="#註解" class="headerlink" title="註解"></a>註解</h3><p>註解分兩種單行跟多行兩種</p>
+<h4 id="單行註解"><a href="#單行註解" class="headerlink" title="單行註解"></a>單行註解</h4><figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span> </span><br><span class="line">    <span class="comment">// PHP 的單行註解</span></span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
+<h4 id="多行註解"><a href="#多行註解" class="headerlink" title="多行註解"></a>多行註解</h4><figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span> </span><br><span class="line">    <span class="comment">/* </span></span><br><span class="line"><span class="comment">        PHP 的多行註解1</span></span><br><span class="line"><span class="comment">        PHP 的多行註解2</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="資料輸出"><a href="#資料輸出" class="headerlink" title="資料輸出"></a>資料輸出</h3><ul>
+<li>字串、數字輸出</li>
+</ul>
+<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span> </span><br><span class="line">    <span class="comment">//單純印出資料</span></span><br><span class="line">    <span class="keyword">echo</span> <span class="string">&quot;我是資料&quot;</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/*</span></span><br><span class="line"><span class="comment">        下面兩種方式都可以印出帶有變數的字串</span></span><br><span class="line"><span class="comment">        1.直接在 &quot;&quot; 加入變數</span></span><br><span class="line"><span class="comment">        2.使用 . 將字串跟變數相加</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">    <span class="keyword">echo</span> <span class="string">&quot;印出第<span class="subst">$num</span>位&quot;</span>;</span><br><span class="line">    <span class="keyword">echo</span> <span class="string">&quot;印出第&quot;</span>.<span class="variable">$num</span>.<span class="string">&quot;位&quot;</span>;</span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>陣列輸出</li>
+</ul>
+<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span> </span><br><span class="line">    <span class="variable">$arr</span> = &#123;<span class="string">&quot;#ff0000&quot;</span>,<span class="string">&quot;#00ff00&quot;</span>&#125;;</span><br><span class="line">    <span class="title function_ invoke__">print_r</span>(<span class="variable">$arr</span>);</span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>php 教學</category>
+      </categories>
+      <tags>
+        <tag>php</tag>
+        <tag>程式教學</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>PHP 函式</title>
+    <url>/2025/03/27/php-function/</url>
+    <content><![CDATA[<p>寫程式不免會有一些特定的內容會需要重複撰寫，如果每次重複的東西都一直複製貼上之前寫的這樣程式會變成非常的長跟難看，而且如果要修改一個地方每個地方都要改。為了讓程式好看及方便修改通常會使用 function (函式) 把要重複執行的地方包起來，要使用時再做引用。<br>我們拿計算BMI為例，如果要一次算五個人的BMI沒有用函式的寫法是</p>
+<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line">    <span class="variable">$w1</span> = <span class="number">60</span>;</span><br><span class="line">    <span class="variable">$h1</span> = <span class="number">1.6</span>;</span><br><span class="line">    <span class="variable">$bmi1</span> = <span class="variable">$w1</span> / (<span class="variable">$h1</span>**<span class="number">2</span>); </span><br><span class="line">    <span class="keyword">echo</span> <span class="string">&quot;第一個人BMI為 <span class="subst">$bmi1</span>&quot;</span>;</span><br><span class="line">    <span class="variable">$w2</span> = <span class="number">65</span>;</span><br><span class="line">    <span class="variable">$h2</span> = <span class="number">1.58</span>;</span><br><span class="line">    <span class="variable">$bmi2</span> = <span class="variable">$w2</span> / (<span class="variable">$h2</span>**<span class="number">2</span>); </span><br><span class="line">    <span class="keyword">echo</span> <span class="string">&quot;第二個人BMI為 <span class="subst">$bmi2</span>&quot;</span>; </span><br><span class="line">    <span class="variable">$w3</span> = <span class="number">70</span>;</span><br><span class="line">    <span class="variable">$h3</span> = <span class="number">1.8</span>;</span><br><span class="line">    <span class="variable">$bmi3</span> = <span class="variable">$w3</span> / (<span class="variable">$h3</span>**<span class="number">2</span>); </span><br><span class="line">    <span class="keyword">echo</span> <span class="string">&quot;第三個人BMI為 <span class="subst">$bmi3</span>&quot;</span>;</span><br><span class="line">    <span class="variable">$w4</span> = <span class="number">63</span>;</span><br><span class="line">    <span class="variable">$h4</span> = <span class="number">1.64</span>;</span><br><span class="line">    <span class="variable">$bmi4</span> = <span class="variable">$w4</span>/ (<span class="variable">$h4</span>**<span class="number">2</span>); </span><br><span class="line">    <span class="keyword">echo</span> <span class="string">&quot;第四個人BMI為 <span class="subst">$bmi4</span>&quot;</span>;</span><br><span class="line">    <span class="variable">$w5</span> = <span class="number">56</span>;</span><br><span class="line">    <span class="variable">$h5</span> = <span class="number">1.5</span>;</span><br><span class="line">    <span class="variable">$bmi5</span> = <span class="variable">$w5</span> / (<span class="variable">$h5</span>**<span class="number">2</span>); </span><br><span class="line">    <span class="keyword">echo</span> <span class="string">&quot;第五個人BMI為 <span class="subst">$bmi5</span>&quot;</span>;</span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
+<p>這樣重複的東西很多而且佔了很大的版面，以下是用函式的方法改寫的</p>
+<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line">    <span class="comment">//先定義函式</span></span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">BMI</span>(<span class="params"><span class="variable">$w</span>,<span class="variable">$h</span></span>)</span>&#123;</span><br><span class="line">        <span class="variable">$bmi</span> = <span class="variable">$w</span> / (<span class="variable">$h</span>**<span class="number">2</span>); <span class="comment">//計算BMI的公式     </span></span><br><span class="line">        <span class="keyword">return</span> <span class="variable">$bmi</span>; <span class="comment">//將變數 $bmi 值回傳</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="variable">$w1</span> = <span class="number">60</span>;</span><br><span class="line">    <span class="variable">$h1</span> = <span class="number">1.6</span>;</span><br><span class="line">    <span class="variable">$bmi1</span> = <span class="title function_ invoke__">BMI</span>(<span class="variable">$w1</span>,<span class="variable">$h1</span>);</span><br><span class="line">    <span class="keyword">echo</span> <span class="string">&quot;第一個人BMI為 <span class="subst">$bmi1</span>&quot;</span>;</span><br><span class="line">    <span class="variable">$w2</span> = <span class="number">65</span>;</span><br><span class="line">    <span class="variable">$h2</span> = <span class="number">1.58</span>;</span><br><span class="line">    <span class="variable">$bmi2</span> = <span class="title function_ invoke__">BMI</span>(<span class="variable">$w2</span>,<span class="variable">$h2</span>);</span><br><span class="line">    <span class="keyword">echo</span> <span class="string">&quot;第二個人BMI為 <span class="subst">$bmi2</span>&quot;</span>; </span><br><span class="line">    <span class="variable">$w3</span> = <span class="number">70</span>;</span><br><span class="line">    <span class="variable">$h3</span> = <span class="number">1.8</span>;</span><br><span class="line">    <span class="variable">$bmi3</span> = <span class="title function_ invoke__">BMI</span>(<span class="variable">$w3</span>,<span class="variable">$h3</span>);</span><br><span class="line">    <span class="keyword">echo</span> <span class="string">&quot;第三個人BMI為 <span class="subst">$bmi3</span>&quot;</span>;</span><br><span class="line">    <span class="variable">$w4</span> = <span class="number">63</span>;</span><br><span class="line">    <span class="variable">$h4</span> = <span class="number">1.64</span>;</span><br><span class="line">    <span class="variable">$bmi4</span> = <span class="title function_ invoke__">BMI</span>(<span class="variable">$w4</span>,<span class="variable">$h4</span>); </span><br><span class="line">    <span class="keyword">echo</span> <span class="string">&quot;第四個人BMI為 <span class="subst">$bmi4</span>&quot;</span>;</span><br><span class="line">    <span class="variable">$w5</span> = <span class="number">56</span>;</span><br><span class="line">    <span class="variable">$h5</span> = <span class="number">1.5</span>;</span><br><span class="line">    <span class="variable">$bmi5</span> = <span class="title function_ invoke__">BMI</span>(<span class="variable">$w5</span>,<span class="variable">$h5</span>); </span><br><span class="line">    <span class="keyword">echo</span> <span class="string">&quot;第五個人BMI為 <span class="subst">$bmi5</span>&quot;</span>;</span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
+<p>透過函式的方法讓重複的內容只要寫一次，這樣不僅可以增加程式的可讀性也可以減少後續修改的難易度</p>
+<h2 id="函式的結構"><a href="#函式的結構" class="headerlink" title="函式的結構"></a>函式的結構</h2><figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line">    <span class="function"><span class="keyword">function</span> 函數名稱(<span class="params">型別<span class="number">1</span> 參數<span class="number">1</span> = 預設值<span class="number">1</span>,型別<span class="number">2</span> 參數<span class="number">2</span> = 預設值<span class="number">2</span>,....</span>)</span>&#123;</span><br><span class="line">        函數內容;</span><br><span class="line">        <span class="comment">//函數不一定要有回傳值，如果沒有回傳值 return 這行就可以省略</span></span><br><span class="line">        <span class="keyword">return</span> 回傳值;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    函數名稱(參數A,參數B,參數C);</span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
+<h2 id="函式的參數"><a href="#函式的參數" class="headerlink" title="函式的參數"></a>函式的參數</h2><h3 id="固定長度參數"><a href="#固定長度參數" class="headerlink" title="固定長度參數"></a>固定長度參數</h3><p>上述的 BMI 函式中 有帶入兩個參數分別為體重跟身高，參數目前只有2個，實際參數的數量可以依照所需不同的功能做調整</p>
+<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">BMI</span>(<span class="params">參數<span class="number">1</span>,參數<span class="number">2</span>,參數<span class="number">3</span>.....,參數n</span>)</span>&#123;</span><br><span class="line">        函數內容;</span><br><span class="line">    &#125;</span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="參數預設值"><a href="#參數預設值" class="headerlink" title="參數預設值"></a>參數預設值</h3><p>以上面BMI的範例來說明，如果使用者沒有輸入身高跟體重我們可以先給它一個預設的值，以免程式因為沒輸入而產生錯誤</p>
+<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line">    <span class="comment">//將參數設定為 體重60、身高1.6</span></span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">BMI</span>(<span class="params"><span class="variable">$w</span>=<span class="number">60</span>,<span class="variable">$h</span>=<span class="number">1.6</span></span>)</span>&#123;</span><br><span class="line">        <span class="variable">$bmi</span> = <span class="variable">$w</span> / (<span class="variable">$h</span>**<span class="number">2</span>);     </span><br><span class="line">        <span class="keyword">return</span> <span class="variable">$bmi</span>; </span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//沒有輸入參數時會以預設的 體重60、身高1.6 去做計算</span></span><br><span class="line">    <span class="variable">$bmi1</span> = <span class="title function_ invoke__">BMI</span>();</span><br><span class="line">    <span class="keyword">echo</span> <span class="string">&quot;第一個人BMI為 <span class="subst">$bmi1</span>&quot;</span>;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">//有輸入參數時會以輸入的參數 體重63、身高1.64 去做計算</span></span><br><span class="line">    <span class="variable">$w2</span> = <span class="number">63</span>;</span><br><span class="line">    <span class="variable">$h2</span> = <span class="number">1.64</span>;</span><br><span class="line">    <span class="variable">$bmi2</span> = <span class="title function_ invoke__">BMI</span>(<span class="variable">$w2</span>,<span class="variable">$h2</span>);</span><br><span class="line">    <span class="keyword">echo</span> <span class="string">&quot;第二個人BMI為 <span class="subst">$bmi2</span>&quot;</span>;</span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="不固定長度參數"><a href="#不固定長度參數" class="headerlink" title="不固定長度參數"></a>不固定長度參數</h3><p>如果函式輸入參數數量是不固定的，可以使用 php 內建的函式去抓取輸入多少參數及每個參數的值是多少</p>
+<table>
+<thead>
+<tr>
+<th>函數</th>
+<th>說明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>func_num_args()</code></td>
+<td>取得傳入參數的個數</td>
+</tr>
+<tr>
+<td><code>func_get_args()</code></td>
+<td>取得傳入參數的陣列</td>
+</tr>
+<tr>
+<td><code>func_get_args($i)</code></td>
+<td>取得參數陣列中第 <code>$i</code> 個元素儲存的值（陣列索引從 0 開始）</td>
+</tr>
+</tbody></table>
+<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line">    <span class="function"><span class="keyword">function</span> 函數名稱(<span class="params"></span>)</span>&#123;<span class="comment">//()內留空就好了</span></span><br><span class="line">        <span class="variable">$argList</span> = <span class="title function_ invoke__">func_get_args</span>(); <span class="comment">//取得傳入參數的陣列</span></span><br><span class="line">        <span class="variable">$loop</span> = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">foreach</span> (<span class="variable">$argList</span> <span class="keyword">as</span> <span class="variable">$value</span>) &#123;</span><br><span class="line">            <span class="keyword">echo</span> <span class="string">&quot;第 <span class="subst">$loop</span> 參數的值是=<span class="subst">$value</span>&quot;</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">echo</span> <span class="string">&#x27;一共有&#x27;</span>.<span class="title function_ invoke__">func_num_args</span>().<span class="string">&#x27;個參數&#x27;</span>;</span><br><span class="line">    &#125;</span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>以上就是今天的 PHP 函式 教學拉～下篇見</p>
+]]></content>
+      <categories>
+        <category>php 教學</category>
+      </categories>
+      <tags>
+        <tag>php</tag>
+        <tag>程式教學</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>PHP 判斷式與迴圈</title>
+    <url>/2025/03/26/php-ifelse/</url>
+    <content><![CDATA[<p>學完PHP的運算子後要開始來加些判斷或者是改變程式執行的流程，為什麼說改變執行流程很重要呢？因為在 PHP 的程式中是由上而下的執行，但是不是每次都可以重頭執行到尾，所以需要使用迴圈之類的方法去達到改變流程。</p>
+<h2 id="判斷式"><a href="#判斷式" class="headerlink" title="判斷式"></a>判斷式</h2><h3 id="if"><a href="#if" class="headerlink" title="if"></a>if</h3><p>PHP 程式裡面 “&#x3D;” 是賦值 ，<code>$num = 10;</code> 是把變數 $num 設定為 10，如果在判斷式裡面做判斷要用 “&#x3D;&#x3D;”。</p>
+<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span> </span><br><span class="line">    <span class="keyword">if</span>(<span class="variable">$num</span> == <span class="number">10</span>)&#123;</span><br><span class="line">        <span class="comment">//當 $num 等於 10 的時候執行</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//用 != 表示不等於 </span></span><br><span class="line">    <span class="keyword">if</span>(<span class="variable">$num</span> != <span class="number">10</span>)&#123;</span><br><span class="line">        <span class="comment">//當 $num 不等於 10 的時候執行</span></span><br><span class="line">    &#125;</span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="if-else"><a href="#if-else" class="headerlink" title="if-else"></a>if-else</h3><figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span> </span><br><span class="line">    <span class="keyword">if</span>(<span class="variable">$num</span> == <span class="number">10</span>)&#123;</span><br><span class="line">        <span class="comment">//當 $num 等於 10 的時候執行</span></span><br><span class="line">    &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">        <span class="comment">//當 $num 不等於 10 的時候執行</span></span><br><span class="line">    &#125;</span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="if-else-if-else"><a href="#if-else-if-else" class="headerlink" title="if-else if-else"></a>if-else if-else</h3><figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span> </span><br><span class="line">    <span class="keyword">if</span>(<span class="variable">$num</span> == <span class="number">10</span>)&#123;</span><br><span class="line">        <span class="comment">//當 $num 等於 10 的時候執行</span></span><br><span class="line">    &#125;<span class="keyword">else</span> <span class="keyword">if</span>(<span class="variable">$num</span> == <span class="number">20</span>)&#123;&#123;</span><br><span class="line">        <span class="comment">//當 $num 等於 20 的時候執行</span></span><br><span class="line">    &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">        <span class="comment">//當 $num 不等於 10 跟 20 的時候執行</span></span><br><span class="line">    &#125;</span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
+<p>在正常的情況上述三種判斷式就可以完成 90% 的程式，但是通常會為了程式的可讀性，在多條件的時候會使用switch-case。</p>
+<h3 id="switch-case"><a href="#switch-case" class="headerlink" title="switch-case"></a>switch-case</h3><figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span> </span><br><span class="line">    <span class="keyword">switch</span> (<span class="variable">$num</span>) &#123;</span><br><span class="line">        <span class="keyword">case</span> <span class="number">10</span>:</span><br><span class="line">            <span class="comment">//當 $num 等於 10 的時候執行</span></span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">case</span> <span class="number">20</span>:</span><br><span class="line">            <span class="comment">//當 $num 等於 20 的時候執行</span></span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">            ... <span class="comment">//這裡可以放更多的 case</span></span><br><span class="line">        <span class="keyword">default</span>:</span><br><span class="line">            <span class="comment">//當 $num 不等於 10 跟 20 的時候執行</span></span><br><span class="line">    &#125;</span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
+<p>case的下的程式碼最後一定要加上一個break跳出程式碼，不然它會繼續執行接下來的所有case。</p>
+<h2 id="迴圈"><a href="#迴圈" class="headerlink" title="迴圈"></a>迴圈</h2><p>迴圈是指符合特定條件下會重複執行指定的程式區塊，直到不符合才會跳出。</p>
+<h3 id="for"><a href="#for" class="headerlink" title="for"></a>for</h3><p>for 迴圈的格式為 <code>for(起始值;判斷式;遞增/遞減)&#123;程式區塊&#125;</code></p>
+<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span>  </span><br><span class="line">    <span class="comment">//設定 $loop 初始值為0，當 $loop 小於 10 每次遞增</span></span><br><span class="line">    <span class="keyword">for</span>(<span class="variable">$loop</span>=<span class="number">0</span>;<span class="variable">$loop</span>&lt;<span class="number">10</span>;<span class="variable">$loop</span>++)&#123;</span><br><span class="line">        <span class="comment">//印出 $loop 值</span></span><br><span class="line">        <span class="keyword">echo</span> <span class="variable">$loop</span>;</span><br><span class="line">    &#125;</span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="while"><a href="#while" class="headerlink" title="while"></a>while</h3><p>while 迴圈的格式為 <code>while(判斷式)&#123;程式區塊&#125;</code></p>
+<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span>  </span><br><span class="line">    <span class="comment">//設定 $loop 初始值為0</span></span><br><span class="line">    <span class="variable">$loop</span> = <span class="number">0</span>;</span><br><span class="line">    <span class="comment">//當 $loop 小於 10 時執行</span></span><br><span class="line">    <span class="keyword">while</span>(<span class="variable">$loop</span>&lt;<span class="number">10</span>)&#123;</span><br><span class="line">        <span class="keyword">echo</span> <span class="variable">$loop</span>;</span><br><span class="line">        <span class="variable">$loop</span> ++; <span class="comment">//這行要記得加，不然迴圈將會變成無限迴圈</span></span><br><span class="line">    &#125;</span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="do-while"><a href="#do-while" class="headerlink" title="do while"></a>do while</h3><p>do while 迴圈的格式為 <code>do&#123;程式區塊&#125;while(判斷式);</code></p>
+<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span>  </span><br><span class="line">    <span class="comment">//設定 $loop 初始值為0</span></span><br><span class="line">    <span class="keyword">do</span>&#123;</span><br><span class="line">        <span class="keyword">echo</span> <span class="variable">$loop</span>;</span><br><span class="line">    &#125;<span class="keyword">while</span>(<span class="variable">$loop</span>&lt;<span class="number">10</span>); <span class="comment">//結尾要記得加;</span></span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
+<p>while 跟  do while 迴圈功能其實大同小異，但是 do while 會先執行一次之後判斷條件符合之後在繼續執行。<br>今天就先到這裡囉～ 明天繼續！！</p>
+]]></content>
+      <categories>
+        <category>php 教學</category>
+      </categories>
+      <tags>
+        <tag>php</tag>
+        <tag>程式教學</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>PHP 程式介紹</title>
+    <url>/2025/03/26/php-intr/</url>
+    <content><![CDATA[<h2 id="PHP-介紹"><a href="#PHP-介紹" class="headerlink" title="PHP 介紹"></a>PHP 介紹</h2><p>PHP 全稱為 Hypertext Preprocessor (超文字預處理器)，他是開源的網頁程式。他的語法借鑑C語言、Java和Perl等流行電腦語言的特點，所以學習起來非常容易。</p>
+<h3 id="PHP的吉祥物名叫「elePHPant」"><a href="#PHP的吉祥物名叫「elePHPant」" class="headerlink" title="PHP的吉祥物名叫「elePHPant」"></a>PHP的吉祥物名叫「elePHPant」</h3><p>PHP的logo在一頭藍象的裡面，由文森·龐蒂爾(Vincent Pontier)在1998年設計。其設計概念是從側面看 PHP 像隻大象。當elePHPant被製作成毛絨玩具時，有時顏色會有不同。<br><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Webysther_20160423_-_Elephpant.svg/250px-Webysther_20160423_-_Elephpant.svg.png" wisth="50%"></p>
+<h3 id="PHP的用途"><a href="#PHP的用途" class="headerlink" title="PHP的用途"></a>PHP的用途</h3><p>PHP 主要用途為製作動態互動式網站、連線資料庫及 API 的建構，用途十分的廣泛。</p>
+<h2 id="為什麼學習-PHP"><a href="#為什麼學習-PHP" class="headerlink" title="為什麼學習 PHP"></a>為什麼學習 PHP</h2><p>以下列出幾點讓我當初選擇學習 PHP 的理由</p>
+<ul>
+<li>大量現有網站使用 PHP<br>根據統計，全世界超過 75% 的網站後端使用 PHP（包括 WordPress、Facebook 初期、維基百科等），這也就說在未來的維護市場還是很大。</li>
+<li>容易上手、語法簡單<br>PHP 是入門後端程式語言中最簡單的選擇之一，對初學者非常友好。</li>
+<li>WordPress、生態系龐大<br>做網站、部落格、購物車？超過 40% 的網站使用 WordPress，而它是 100% PHP 撰寫。</li>
+<li>成本低、部署方便<br>PHP 可以在便宜的虛擬主機或自己架設的 LAMP 環境運作，不需要複雜的環境配置。</li>
+</ul>
+<p>根據以上四點的分析，學習 PHP 的投資報酬蠻高的，就讓我們開始埋頭進到 PHP 的世界探索吧</p>
+<h2 id="參考資料"><a href="#參考資料" class="headerlink" title="參考資料"></a>參考資料</h2><ul>
+<li><a href="https://zh.wikipedia.org/zh-tw/PHP">維基百科</a></li>
+</ul>
+]]></content>
+      <categories>
+        <category>php 教學</category>
+      </categories>
+      <tags>
+        <tag>php</tag>
+        <tag>程式教學</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>PHP 運算子</title>
+    <url>/2025/03/26/php-ope/</url>
+    <content><![CDATA[<p>從上篇 <a href="../php-c1/">PHP 入門</a> 我們了解了 PHP 基本的變數定義，在這篇會提到一些 PHP 常用的運算子。<br>通常運算子有分三種</p>
+<ul>
+<li>指定運算子</li>
+<li>算術運算子</li>
+<li>關係運算子</li>
+<li>邏輯運算子</li>
+</ul>
+<h2 id="指定運算子"><a href="#指定運算子" class="headerlink" title="指定運算子"></a>指定運算子</h2><p>指定運算子就是我們常見的 “&#x3D;” ，將右邊的結果存入左邊的變數內。</p>
+<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line">    <span class="variable">$a</span> = <span class="number">10</span>;</span><br><span class="line">    <span class="comment">//將 10 存入 變數a</span></span><br><span class="line">    <span class="variable">$a</span> = <span class="variable">$b</span>;</span><br><span class="line">    <span class="comment">//將 變數b 存入 變數a</span></span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="算術運算子"><a href="#算術運算子" class="headerlink" title="算術運算子"></a>算術運算子</h2><p>算術運算子顧名思義就是我們常用的算術符號(加、減、乘、除 等…)。</p>
+<ul>
+<li>(+) 相加</li>
+</ul>
+<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span> </span><br><span class="line">    <span class="variable">$a</span> = <span class="number">1</span>+<span class="number">1</span>;  <span class="comment">// 輸出結果 $a 會等於 2</span></span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>(-) 相減</li>
+</ul>
+<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span> </span><br><span class="line">    <span class="variable">$a</span> = <span class="number">2</span>-<span class="number">1</span>;  <span class="comment">// 輸出結果 $a 會等於 1</span></span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>(*) 相乘</li>
+</ul>
+<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span> </span><br><span class="line">    <span class="variable">$a</span> = <span class="number">2</span>*<span class="number">3</span>;  <span class="comment">// 輸出結果 $a 會等於 6</span></span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>(&#x2F;) 相除</li>
+</ul>
+<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span> </span><br><span class="line">    <span class="variable">$a</span> = <span class="number">6</span>/<span class="number">3</span>;  <span class="comment">// 輸出結果 $a 會等於 2</span></span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>(%) 取餘數</li>
+</ul>
+<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span> </span><br><span class="line">    <span class="variable">$a</span> = <span class="number">5</span>%<span class="number">2</span>;  <span class="comment">// 輸出結果 $a 會等於 1</span></span><br><span class="line">    <span class="variable">$b</span> = <span class="number">6</span>%<span class="number">2</span>;  <span class="comment">// 輸出結果 $a 會等於 0</span></span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>(**) 次方</li>
+</ul>
+<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span> </span><br><span class="line">    <span class="variable">$a</span> = <span class="number">5</span>**<span class="number">2</span>;  <span class="comment">// 表示5的2次方，輸出結果 $a 會等於 25</span></span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>範例 ： BMI 計算</p>
+<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">體重，單位是公斤</span></span><br><span class="line"><span class="comment">身高，單位是公尺</span></span><br><span class="line"><span class="comment">BMI公式是 體重 除以 身高的平方</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line">    <span class="variable">$weight</span> = <span class="number">60</span>;</span><br><span class="line">    <span class="variable">$height</span> = <span class="number">1.6</span>;</span><br><span class="line">    <span class="variable">$bmi</span> = <span class="variable">$weight</span> / (<span class="variable">$height</span>**<span class="number">2</span>); </span><br><span class="line">    <span class="keyword">echo</span> <span class="variable">$bmi</span>;</span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="增量賦值（Augmented-Assignment）"><a href="#增量賦值（Augmented-Assignment）" class="headerlink" title="增量賦值（Augmented Assignment）"></a>增量賦值（Augmented Assignment）</h3><p>等號左右如果都用到一樣的數值，可以使用增量賦值去縮短程式碼並增加可讀性</p>
+<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span> </span><br><span class="line"><span class="variable">$a</span> = <span class="number">1</span>;</span><br><span class="line"><span class="comment">//正常來說如果要讓變數A+1會寫成這樣</span></span><br><span class="line"><span class="variable">$a</span> = <span class="variable">$a</span> + <span class="number">1</span>;</span><br><span class="line"><span class="comment">//可以將$a 省略縮短成 </span></span><br><span class="line"><span class="variable">$a</span> += <span class="number">1</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 使用其他算術運算子一樣可以這樣做</span></span><br><span class="line"><span class="variable">$b</span> -= <span class="number">1</span>;</span><br><span class="line"><span class="variable">$c</span> *= <span class="number">1</span>;</span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="關係運算子"><a href="#關係運算子" class="headerlink" title="關係運算子"></a>關係運算子</h2><ul>
+<li>(&gt;) 大於</li>
+</ul>
+<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span> </span><br><span class="line">   <span class="number">2</span> &gt; <span class="number">1</span> ;  <span class="comment">// 輸出結果 true</span></span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>(&lt;) 小於</li>
+</ul>
+<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span> </span><br><span class="line">    <span class="number">2</span> &lt; <span class="number">1</span>;  <span class="comment">// 輸出結果 false</span></span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>(&gt;&#x3D;) 大於等於</li>
+</ul>
+<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span> </span><br><span class="line">    <span class="number">2</span> &gt;= <span class="number">1</span>;  <span class="comment">// 輸出結果 true</span></span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>(&lt;&#x3D;) 小於等於</li>
+</ul>
+<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span> </span><br><span class="line">    <span class="number">2</span> &lt;= <span class="number">1</span>;  <span class="comment">// 輸出結果 false</span></span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>(&#x3D;&#x3D;) 等於</li>
+</ul>
+<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span> </span><br><span class="line">    <span class="number">2</span> == <span class="number">2</span>;  <span class="comment">// 輸出結果 true</span></span><br><span class="line">    <span class="comment">/*這邊注意!! 如果使用 == 他是會忽略資料型態的，所以 數字2 會等於 字串2 */</span></span><br><span class="line">    <span class="number">2</span> == <span class="string">&#x27;2&#x27;</span> <span class="comment">// 輸出結果 true</span></span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>(!&#x3D;) 不等於</li>
+</ul>
+<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span> </span><br><span class="line">    <span class="number">2</span> != <span class="number">2</span>;  <span class="comment">// 輸出結果 false</span></span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>(&#x3D;&#x3D;&#x3D;) 完全等於</li>
+</ul>
+<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span> </span><br><span class="line">    <span class="number">2</span> == <span class="number">2</span>;  <span class="comment">// 輸出結果 true</span></span><br><span class="line">    <span class="comment">/*使用 === 會加入資料型態的判斷，所以 數字2 不等於 字串2 */</span></span><br><span class="line">    <span class="number">2</span> == <span class="string">&#x27;2&#x27;</span> <span class="comment">// 輸出結果 false</span></span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>(!&#x3D;&#x3D;) 完全不等於</li>
+</ul>
+<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span> </span><br><span class="line">     <span class="number">2</span> !== <span class="number">2</span>;  <span class="comment">// 輸出結果 false</span></span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
+<h2 id="邏輯運算子"><a href="#邏輯運算子" class="headerlink" title="邏輯運算子"></a>邏輯運算子</h2><ul>
+<li>且(and、&amp;&amp;)</li>
+</ul>
+<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="title function_ invoke__">var_dump</span>(<span class="literal">true</span> <span class="keyword">and</span> <span class="literal">false</span>);  <span class="comment">//輸出 bool(false)</span></span><br><span class="line"><span class="title function_ invoke__">var_dump</span>(<span class="literal">true</span> &amp;&amp; <span class="literal">false</span>);   <span class="comment">//輸出 bool(false)</span></span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>或(or、||)</li>
+</ul>
+<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="title function_ invoke__">var_dump</span>(<span class="literal">true</span> <span class="keyword">or</span> <span class="literal">false</span>); <span class="comment">//輸出 bool(true)</span></span><br><span class="line"><span class="title function_ invoke__">var_dump</span>(<span class="literal">true</span> || <span class="literal">false</span>); <span class="comment">//輸出 bool(true)</span></span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>非(!)</li>
+</ul>
+<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="title function_ invoke__">var_dump</span>(!<span class="literal">false</span>);  <span class="comment">//輸出 bool(true)</span></span><br><span class="line"><span class="title function_ invoke__">var_dump</span>(!<span class="literal">true</span>);   <span class="comment">//輸出 bool(false)</span></span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>互斥或(xor) (兩個一樣是 false 兩個不一樣是 true)</li>
+</ul>
+<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="title function_ invoke__">var_dump</span>(<span class="literal">true</span> <span class="keyword">xor</span> <span class="literal">false</span>); <span class="comment">//輸出 bool(true)</span></span><br><span class="line"><span class="title function_ invoke__">var_dump</span>(<span class="literal">true</span> <span class="keyword">xor</span> <span class="literal">true</span>);  <span class="comment">//輸出 bool(false)</span></span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
+<p>以上一些 PHP 常見的運算子就先介紹到這裡，接著我們下一篇將提到 php 常用的判斷及迴圈的流程。</p>
+]]></content>
+      <categories>
+        <category>php 教學</category>
+      </categories>
+      <tags>
+        <tag>php</tag>
+        <tag>程式教學</tag>
+      </tags>
+  </entry>
+</search>
